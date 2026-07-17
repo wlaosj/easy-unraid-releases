@@ -1,1 +1,1 @@
-{"tag_name":"v1.0.0+5","html_url":"https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+5","body":"* fix(ci): 修复 needed 任务被 skip 导致发布任务被连锁跳过的问题，升级版本号至 1.0.0+5\\n"}
+{"tag_name":"v1.0.0+6","html_url":"https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+6","body":"* release: 升级版本号至 1.0.0+6 以构建包含 Android 版本号归一化修复的新版 APK\\n"}
