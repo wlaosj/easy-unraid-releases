@@ -1,1 +1,1 @@
-{"tag_name":"v1.0.0+4","html_url":"https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+4","body":"* feat(windows): 引入 video_player_win 依赖以修复 Windows 平台下视频播放报错的问题\\n"}
+{"tag_name":"v1.0.0+5","html_url":"https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+5","body":"* release: 升级版本号至 1.0.0+5 并优化自适应顶栏字号布局与修复安卓跳转更新\\n"}
