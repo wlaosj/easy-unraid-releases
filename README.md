@@ -1,26 +1,6 @@
-# 🚀 Easy Unraid - Client Download & Releases
+# 🚀 Easy Unraid - 客户端下载与发布页 (Client Download & Releases)
 
-[English](#english) | [中文说明](#中文说明)
-
----
-
-## English
-
-**Easy Unraid** is a sleek, modern, and powerful cross-platform client manager for Unraid servers, built with Flutter. It provides an intuitive user interface for monitoring server telemetry, managing Docker containers, virtual machines, local files, and securely connecting via SSH.
-
-### 📥 Download Installation Packages
-
-Please head over to the **[Releases](https://github.com/wlaosj/easy-unraid-releases/releases/latest)** page to download the latest build for your platform:
-
-*   **🤖 Android**: Download the specific APK for your device architecture (`arm64` / `arm32` / `x86_64`).
-*   **💻 macOS**: Download the standard `.dmg` image. Drag and drop to install.
-*   **🔌 Windows**: Download the portable `.zip` archive. Extract and run `easy_unraid.exe`.
-
-### 🛡️ Security & Privacy Auditable Core
-We value the safety of your server. To guarantee absolute security:
-*   All connection settings and credentials are strictly stored in your local system sandbox.
-*   We do not use any cloud servers for telemetry or password logging.
-*   Our core SSH, keypair generation, and execution modules are completely open-source and audited. Check out the open-source repository: **[easy-unraid-ssh](https://github.com/wlaosj/easy-unraid-ssh)**.
+[中文说明](#中文说明) | [English](#english)
 
 ---
 
@@ -42,3 +22,23 @@ We value the safety of your server. To guarantee absolute security:
 *   **本地存储**：所有连接凭证和密钥对只保存在您本机的安全沙盒中。
 *   **直连无中转**：App 仅与您填写的服务器 IP 进行内网/外网直连，绝不经过任何第三方云端。
 *   **核心安全组件开源**：我们已将涉及 SSH 密码处理、密钥对生成、公钥注入的底层通信逻辑完全开源以接受全球审计，您可以访问核心安全仓库查看源码：**[easy-unraid-ssh](https://github.com/wlaosj/easy-unraid-ssh)**。
+
+---
+
+## English
+
+**Easy Unraid** is a sleek, modern, and powerful cross-platform client manager for Unraid servers, built with Flutter. It provides an intuitive user interface for monitoring server telemetry, managing Docker containers, virtual machines, local files, and securely connecting via SSH.
+
+### 📥 Download Installation Packages
+
+Please head over to the **[Releases](https://github.com/wlaosj/easy-unraid-releases/releases/latest)** page to download the latest build for your platform:
+
+*   **🤖 Android**: Download the specific APK for your device architecture (`arm64` / `arm32` / `x86_64`).
+*   **💻 macOS**: Download the standard `.dmg` image. Drag and drop to install.
+*   **🔌 Windows**: Download the portable `.zip` archive. Extract and run `easy_unraid.exe`.
+
+### 🛡️ Security & Privacy Auditable Core
+We value the safety of your server. To guarantee absolute security:
+*   All connection settings and credentials are strictly stored in your local system sandbox.
+*   We do not use any cloud servers for telemetry or password logging.
+*   Our core SSH, keypair generation, and execution modules are completely open-source and audited. Check out the open-source repository: **[easy-unraid-ssh](https://github.com/wlaosj/easy-unraid-ssh)**.
