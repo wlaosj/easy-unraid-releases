@@ -1,7 +1,7 @@
 # 🚀 Easy Unraid
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/wlaosj/easy-unraid-ssh/main/lib/easy_unraid_ssh.dart" alt="Easy Unraid Logo" width="120" style="border-radius: 24px;"/>
+  <img src="https://raw.githubusercontent.com/wlaosj/easy-unraid-ssh/main/logo.png" alt="Easy Unraid Logo" width="120" style="border-radius: 24px;"/>
 </p>
 
 <p align="center">
@@ -93,7 +93,7 @@ Please visit the **[👉 Releases Page](https://github.com/wlaosj/easy-unraid-re
 
 ---
 
-### 🛡️ Security & Trust
+### 🛡️ 安全与隐私 (Security & Privacy)
 
 Your server's root access is critical. We designed Easy Unraid with a security-first architecture:
 
