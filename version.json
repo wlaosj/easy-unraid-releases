@@ -1,1 +1,1 @@
-{"tag_name":"v1.0.0+2","html_url":"https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+2","body":"* release: v1.0.0+2 (发布第二个自动化版本，集成免限流更新检测)\\n"}
+{"tag_name":"v1.0.0+5","html_url":"https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+5","body":"* fix(ci): 修复 needed 任务被 skip 导致发布任务被连锁跳过的问题，升级版本号至 1.0.0+5\\n"}
