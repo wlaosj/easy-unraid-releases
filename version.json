@@ -1,1 +1,1 @@
-{"tag_name": "v1.0.0+1", "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+1", "body": "* release: v1.0.0+1 (first official automated build)\n* feat(settings): update About section links to point to the public downloads and SSH core repositories\n* docs: streamline private README.md into developer cheatsheet"}
+{"tag_name":"v1.0.0+2","html_url":"https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+2","body":"* release: v1.0.0+2 (发布第二个自动化版本，集成免限流更新检测)\\n"}
