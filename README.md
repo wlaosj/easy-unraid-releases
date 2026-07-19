@@ -27,12 +27,13 @@
 
 ### ✨ 核心功能亮点
 
-*   **📊 实时硬件仪表盘**：直观的多色彩图表展示 CPU 负载、各核心温度、内存使用率、实时网速以及阵列读写状态。
-*   **🐳 Docker 容器管理**：支持一键启动、停止、重启 Docker 容器，并可在 App 内直接查看容器的实时运行日志。
+*   **📊 实时硬件仪表盘**：直观展示 CPU 负载、各核心温度、内存使用率、实时网速及阵列读写流量，服务器状态一目了然。
+*   **🐳 Docker 容器与 Compose 编排**：一键启停/重启 Docker 容器，查看实时日志；**独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑**，提供流畅的项目编排体验。
 *   **💾 存储阵列掌控**：图表化展示磁盘空间使用率，实时读取各个硬盘的读写速度、工作温度以及健康坏道（Errors）监控。
-*   **📁 极速文件管理器**：基于底层 SFTP 协议实现。支持文件与文件夹的浏览、删除、重命名；内置媒体流中转，支持音视频在线极速播放。
-*   **🚀 虚拟机控制**：一键开启、关闭、重启 Unraid 内置的虚拟机服务。
-*   **🛡️ 安全 SSH 终端**：内置全功能 SSH 终端控制台，支持多会话管理，让您随时随地进行深度服务器维护。
+*   **📁 极速文件管理器**：基于底层 SFTP 协议实现，支持文件与文件夹的常规管理；**内置本地 HTTP 媒体流串流服务器，支持远程音视频（4K 电影/无损音乐）免下载在线极速播放**；支持 PDF 高清预览、ZIP 等压缩包在线文件树目录浏览与一键解压。
+*   **🗑️ 误删回收站保护**：App 内置独立回收站机制，误删文件可暂存并一键秒级还原，彻底防止珍贵数据意外丢失。
+*   **🚀 虚拟机与全功能 SSH 终端**：支持一键管理虚拟机服务；内置多会话高安全 SSH 终端控制台，让您随时进行深度服务器维护。
+*   **✨ 更多期待**：更多高阶实用功能与细节体验正在陆续开发并持续加入中……
 
 ---
 
@@ -74,12 +75,13 @@
 
 ### ✨ Key Features
 
-*   **📊 Real-time Dashboard**: Beautiful multi-color charts displaying CPU load, core temperatures, memory usage, real-time bandwidth, and array read/write status.
-*   **🐳 Docker Management**: Start, stop, and restart Docker containers with one tap. View container logs directly in the app.
+*   **📊 Real-time Dashboard**: Beautiful charts displaying CPU load, temperatures, memory usage, network bandwidth, and array read/write status at a glance.
+*   **🐳 Docker & Compose Orchestration**: Start, stop, and restart Docker containers and view live logs. **Exclusive support for Docker Compose project deployments and YAML editor** on both mobile and desktop.
 *   **💾 Storage Array Monitor**: Track disk utilization, read/write speeds, temperatures, and smart health errors in real-time.
-*   **📁 Built-in File Manager**: High-speed file browsing, deleting, and renaming powered by SFTP. Stream media files directly from your server.
-*   **🚀 VM Control**: Turn on, shut down, or restart your Unraid virtual machines.
-*   **🛡️ Secure SSH Terminal**: Full-featured SSH console supporting multiple sessions for advanced server maintenance.
+*   **📁 Powerful File Manager**: Full-featured SFTP file browser. **Built-in local HTTP streaming server enabling seekable 4K video & audio playback**; PDF viewer and online ZIP / TAR archive tree browser/extraction.
+*   **🗑️ Safe Trash Bin**: Integrated recycle bin support for file deletes. Easily restore files/folders to avoid accidental data loss.
+*   **🚀 VM Control & SSH Console**: Start, stop, or restart your Unraid virtual machines; built-in multi-session SSH console for advanced server maintenance.
+*   **✨ More Coming Soon**: More advanced features and user experience enhancements are actively under development!
 
 ---
 
