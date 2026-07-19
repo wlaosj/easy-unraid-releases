@@ -1,1 +1,0 @@
-{"tag_name":"v1.0.2+19","html_url":"https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.2+19","body":"* chore(release): 升级版本号至 1.0.2+19 并推送发布修复版本\\n* fix(update): 追加手动检查更新入口拦截，防范 Android 端更新进度被覆盖的边界漏洞\\n* fix(update): 提升下载状态为全局，并锁定 PopScope 彻底解决安卓端更新弹窗重复覆盖 Bug\\n* chore(release): 升级版本号至 1.0.1+18，并启用 macOS 和 Windows CI 构建\\n* fix(files): 优化 PDF 预览控制栏在移动端窄屏下的响应式排版\\n"}
