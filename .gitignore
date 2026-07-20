@@ -1,0 +1,10 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows thumbnail databases
+Thumbs.db
+ehthumbs.db
