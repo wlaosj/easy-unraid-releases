@@ -1,5 +1,0 @@
-{
-  "tag_name": "v1.0.1+2",
-  "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.1+2",
-  "body": "### 🇨🇳 中文更新日志\n* 🚀 **首次公测启动**：Easy Unraid 正式开启公测！\n* 📊 **可视化监控看版**：打破浏览器限制，原生卡片化直观掌控 Unraid CPU、内存、磁盘阵列及网络实时状态。\n* 🔑 **高强度免密认证**：底层基于纯 SSH 密钥对安全配对，账号密码仅在握手期使用，数据 100% 直连无中转。\n* 🇨🇳 **鸿蒙 NEXT 适配预埋**：已打通本地编译调试，并在原生端配置了生物识别与安全存储的 MethodChannel 拦截通道，静候华为官方 Dart 3 引擎成熟。\n\n### 🇺🇸 English Changelog\n* 🚀 **First Public Beta**: Easy Unraid is officially launched in public beta!\n* 📊 **Stunning Dashboard**: Monitor Unraid CPU, memory, array storage, and network real-time states in a clean card layout.\n* 🔑 **Secure Keypair Auth**: SSH keypair connection ensures no server passwords are saved in the long run. 100% direct connection with zero backend telemetry.\n* 🇨🇳 **HarmonyOS NEXT Support**: Channel mocks for biometric local auth and secure storage are pre-implemented."
-}
