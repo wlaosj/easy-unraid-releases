@@ -23,17 +23,33 @@
 
 ## 🇨🇳 中文介绍
 
-**Easy Unraid** 是一款专为 Unraid 系统量身打造的跨平台客户端管理器。我们致力于打破传统的 WebUI 限制，为您在手机和电脑端提供丝滑的原生操作体验与精美的可视化监控看板。
+**Easy Unraid** 是一款专为 Unraid 系统量身打造的跨平台客户端管理器。我们致力于打破传统的浏览器 WebUI 限制，为您在手机和电脑端提供流畅的原生交互、精美的可视化监控看板与深度系统管理服务。
 
 ### ✨ 核心功能亮点
 
-*   **📊 实时硬件仪表盘**：直观展示 CPU 负载、各核心温度、内存使用率、实时网速及阵列读写流量，服务器状态一目了然。
-*   **🐳 Docker 容器与 Compose 编排**：一键启停/重启 Docker 容器，查看实时日志；**独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑**，提供流畅的项目编排体验。
-*   **💾 存储阵列掌控**：图表化展示磁盘空间使用率，实时读取各个硬盘的读写速度、工作温度以及健康坏道（Errors）监控。
-*   **📁 极速文件管理器**：基于底层 SFTP 协议实现，支持文件与文件夹的常规管理；**内置本地 HTTP 媒体流串流服务器，支持远程音视频（4K 电影/无损音乐）免下载在线极速播放**；支持 PDF 高清预览、ZIP 等压缩包在线文件树目录浏览与一键解压。
-*   **🗑️ 误删回收站保护**：App 内置独立回收站机制，误删文件可暂存并一键秒级还原，彻底防止珍贵数据意外丢失。
-*   **🚀 虚拟机与全功能 SSH 终端**：支持一键管理虚拟机服务；内置多会话高安全 SSH 终端控制台，让您随时进行深度服务器维护。
-*   **✨ 更多期待**：更多高阶实用功能与细节体验正在陆续开发并持续加入中……
+*   **📊 实时硬件仪表盘**：直观图形化展示 CPU 负载、各核心实时温度、内存使用率、实时网速及磁盘阵列读写流量，服务器状态一手掌控。
+*   **🐳 Docker 与 Compose 编排**：一键启停/重启 Docker 容器，实时流式查阅日志；**独家提供对 Docker Compose 项目一键部署与 YAML 语法高亮编辑的支持**，享受丝滑的项目编排。
+*   **💾 存储阵列深度监控**：精美图表化展示磁盘空间使用率，实时读取各个硬盘的读写速度、工作温度以及健康坏道（Errors）警报。
+*   **📁 极速文件管理器**：基于高安全性 SFTP 协议实现。**内置本地 HTTP 媒体流串流服务器，支持 4K 高清电影/无损音乐免下载极速在线播放**；支持 PDF 高清预览、ZIP 等压缩包在线目录树浏览与一键秒级解压。
+*   **🗑️ 误删回收站双重保护**：App 内置独立物理回收站缓冲机制，手机上误删的文件可暂存并一键原路还原，彻底杜绝宝贵数据意外被抹除。
+*   **🚀 虚拟机与全功能 SSH 终端**：支持管理虚拟机服务的启停；内置多会话高安全 SSH 终端控制台，让您随时随地进行深度服务器维护。
+
+---
+
+### 🚀 快速配对指南 (Quick Start)
+
+首次运行 App 时，在系统配置页需要进行 SSH 配对。我们为您提供了两种极具弹性与安全性的连接模式：
+
+#### 方式 A：自动模式（极简一步配对）
+1. 填入您的 Unraid API 链接及 SSH 端口。
+2. 填入您的 `root` 账户密码。
+3. App 连通后会自动生成高安全强度的 SSH 公私钥对并注入您的 Unraid 闪存中。配对完成后，**明文密码在内存中会被立即物理抹除，永久不在本地存储**。后续连接均走密钥对免密通信。
+
+#### 方式 B：手动模式（推荐 - 100% 密码零接触）
+1. 填入您的 Unraid API 链接及 SSH 端口。
+2. 在 App 配置中生成或填入您已有的 SSH 密钥对，并复制 App 展现的 **公钥 (Public Key)**。
+3. 登录您的 Unraid Web 管理页面，打开终端，将此公钥内容追加到您的 `/boot/config/ssh/authorized_keys` 授权文件中即可。
+4. App 将不经过任何密码输入环节，直接通过您保存的私钥安全建立 SSH 会话，对您的密码安全做到 100% 零触碰。
 
 ---
 
@@ -41,49 +57,63 @@
 
 请前往 **[👉 最新发布页面 (Releases)](https://github.com/wlaosj/easy-unraid-releases/releases/latest)** 下载对应系统的安装包：
 
-| 平台 | 格式 | 安装说明 |
+| 平台 | 格式 | 安装与使用说明 |
 | :--- | :---: | :--- |
-| **🤖 安卓端 (Android)** | `.apk` | 推荐下载 `arm64` 版本以获得最佳性能。 |
+| **🤖 安卓端 (Android)** | `.apk` | 推荐下载 `arm64-v8a` 版本以获得最佳硬件加速性能。 |
 | **💻 苹果端 (macOS)** | `.dmg` | 下载后双击打开，将 `Easy Unraid` 拖入 `Applications` 文件夹即可。 |
 | **🔌 微软端 (Windows)** | `.zip` | 下载后解压，双击运行文件夹内的 `easy_unraid.exe` 即可（免安装）。 |
-| **📱 苹果手机端 (iOS)** | `App Store` | 正在苹果 App Store 上架审核中，敬请期待。 |
+| **📱 苹果手机端 (iOS)** | `App Store` | 正在 App Store 上架审核中，敬请期待。 |
 
 ---
 
-### 🛡️ 极客安全背书与开源审计
+### 🛡️ 安全背书与极客审计
 
-服务器的 root 权限关乎您的数据生命安全。为了让您百分之百放心，我们做出了以下安全防线设计：
+服务器的安全关乎您的数字资产生命。我们始终坚持“本地直连、安全透明”的极客开发原则：
 
 > [!IMPORTANT]
-> **1. 密码零保留，更支持“免密码”手动模式**  
-> * **自动模式**：首次配对时输入一次密码，App 在连接并将生成的安全公钥注入 Unraid 闪存后，**立即从本地内存中物理抹除明文密码**，永久不进行本地存储。
-> * **手动模式（推荐）**：您**完全无需向 App 交付任何 root 密码**。App 可在本地为您生成 SSH 密钥对（或导入已有密钥），您只需手动将公钥追加到 Unraid 服务器的 `authorized_keys` 中即可完成配对，实现 100% 密码零接触。
-> * 后续所有连接均走高安全强度的 SSH 公私钥对进行免密通信。
+> **1. 密码零保留，物理层抹除**  
+> 无论何种模式，App 均不以 any 明文形式在本地保留您的 root 密码。配对成功后即走高安全的 RSA/ED25519 强加密 SSH 密钥对进行免密连接。
 
 > [!TIP]
-> **2. 核心通信组件开源审计**  
-> 所有的密钥生成、密码配对与命令执行逻辑，均封装在我们的独立开源模块中，接受全球极客的安全性审计。  
+> **2. 核心通信组件 100% 开源审计**  
+> 所有涉及密钥对生成、密码配对与底层命令执行逻辑，均封装在我们的独立开源模块中，接受全球极客的安全性审计。  
 > 🔗 开源模块地址：[easy-unraid-ssh 源码库](https://github.com/wlaosj/easy-unraid-ssh)
 
 > [!NOTE]
-> **3. 纯本地直连，绝无云端中转**  
-> App 在运行过程中仅与您填写的服务器 IP（内网直连或您的内网穿透域名）通信，绝对没有任何向第三方服务器上传密码、凭证或流量数据的分析代码。欢迎使用 `Charles` 或 `Wireshark` 等工具随时进行网络抓包审计。
+> **3. 纯本地直接连接，绝无云端中转**  
+> App 仅与您填写的服务器 IP（局域网直连或您自己的内网穿透域名）直接通信，绝无云端中转服务器，也绝不收集任何流量日志。欢迎使用 `Charles`、`Wireshark` 等代理抓包工具随时进行网络流量审计。
 
 ---
 
 ## 🇺🇸 English
 
-**Easy Unraid** is a sleek, modern, and powerful cross-platform client manager for Unraid servers, built with Flutter. It breaks free from browser limitations to provide you with a fluid, native experience on both mobile devices and desktops.
+**Easy Unraid** is a sleek, modern, and powerful cross-platform manager for Unraid servers, built with Flutter. It breaks free from traditional browser limitations to provide you with a fluid, native experience on both mobile devices and desktops.
 
 ### ✨ Key Features
 
-*   **📊 Real-time Dashboard**: Beautiful charts displaying CPU load, temperatures, memory usage, network bandwidth, and array read/write status at a glance.
-*   **🐳 Docker & Compose Orchestration**: Start, stop, and restart Docker containers and view live logs. **Exclusive support for Docker Compose project deployments and YAML editor** on both mobile and desktop.
+*   **📊 Real-time Dashboard**: Beautiful interactive charts displaying CPU load, individual core temperatures, memory usage, network bandwidth, and array read/write throughput.
+*   **🐳 Docker & Compose Orchestration**: Start, stop, and restart Docker containers and view live stream logs. **Exclusive support for Docker Compose project deployments and YAML editor** on both mobile and desktop.
 *   **💾 Storage Array Monitor**: Track disk utilization, read/write speeds, temperatures, and smart health errors in real-time.
 *   **📁 Powerful File Manager**: Full-featured SFTP file browser. **Built-in local HTTP streaming server enabling seekable 4K video & audio playback**; PDF viewer and online ZIP / TAR archive tree browser/extraction.
 *   **🗑️ Safe Trash Bin**: Integrated recycle bin support for file deletes. Easily restore files/folders to avoid accidental data loss.
 *   **🚀 VM Control & SSH Console**: Start, stop, or restart your Unraid virtual machines; built-in multi-session SSH console for advanced server maintenance.
-*   **✨ More Coming Soon**: More advanced features and user experience enhancements are actively under development!
+
+---
+
+### 🚀 Quick Start Guide
+
+During the initial setup, you will need to establish an SSH pairing. Easy Unraid provides two secure configuration modes:
+
+#### Mode A: Automatic Pairing
+1. Fill in your Unraid API URL and SSH port.
+2. Input your `root` password.
+3. The App will connect, generate a secure SSH keypair, and inject the public key into your Unraid flash drive automatically. Once verified, **your password is wiped from memory immediately and never saved locally**.
+
+#### Mode B: Manual Setup (Recommended - 100% Password-free)
+1. Fill in your Unraid API URL and SSH port.
+2. Generate an SSH keypair in the App settings and copy the **Public Key**.
+3. Log in to your Unraid WebGUI, open a terminal, and append the public key to your `/boot/config/ssh/authorized_keys` file.
+4. The App will establish secure SSH connections using the saved private key without ever prompting for or touching your root password.
 
 ---
 
@@ -91,17 +121,17 @@
 
 Please visit the **[👉 Releases Page](https://github.com/wlaosj/easy-unraid-releases/releases/latest)** to download the installation package:
 
-*   **Android (`.apk`)**: Select the architecture match for your device (typically `arm64` is recommended).
+*   **Android (`.apk`)**: Select the architecture match for your device (typically `arm64-v8a` is recommended).
 *   **macOS (`.dmg`)**: Download, double click, and drag `Easy Unraid` into your `Applications` folder.
 *   **Windows (`.zip`)**: Download, extract the archive, and double-click `easy_unraid.exe` to run.
 
 ---
 
-### 🛡️ 安全与隐私 (Security & Privacy)
+### 🛡️ Security & Privacy
 
 Your server's root access is critical. We designed Easy Unraid with a security-first architecture:
 
-*   **Zero Password Storage & Manual Passwordless Access**: 
+*   **Zero Password Storage & Manual Passwordless Access**:
     *   **Automatic Mode**: The root password is only used in memory for the initial session to inject the SSH key, then permanently wiped.
     *   **Manual Mode (Recommended)**: You **never need to input your root password in the App**. The App can generate an SSH keypair for you locally; simply copy the public key and manually append it to your Unraid's `authorized_keys` file to complete the setup.
     *   All subsequent sessions rely entirely on high-strength SSH keypair authentication.
