@@ -55,8 +55,10 @@
 服务器的 root 权限关乎您的数据生命安全。为了让您百分之百放心，我们做出了以下安全防线设计：
 
 > [!IMPORTANT]
-> **1. 密码仅用一次，成功后物理抹除**  
-> 首次配对时，App 在成功连接并将生成的安全公钥注入您的 Unraid 闪存后，**会立即在本地内存中物理抹除明文密码**，永久不进行本地存储。后续所有连接均走高安全强度的公钥私钥对免密登录。
+> **1. 密码零保留，更支持“免密码”手动模式**  
+> * **自动模式**：首次配对时输入一次密码，App 在连接并将生成的安全公钥注入 Unraid 闪存后，**立即从本地内存中物理抹除明文密码**，永久不进行本地存储。
+> * **手动模式（推荐）**：您**完全无需向 App 交付任何 root 密码**。App 可在本地为您生成 SSH 密钥对（或导入已有密钥），您只需手动将公钥追加到 Unraid 服务器的 `authorized_keys` 中即可完成配对，实现 100% 密码零接触。
+> * 后续所有连接均走高安全强度的 SSH 公私钥对进行免密通信。
 
 > [!TIP]
 > **2. 核心通信组件开源审计**  
@@ -99,6 +101,9 @@ Please visit the **[👉 Releases Page](https://github.com/wlaosj/easy-unraid-re
 
 Your server's root access is critical. We designed Easy Unraid with a security-first architecture:
 
-*   **Zero Password Storage**: The root password is only used in memory for the initial session to inject the SSH key. Once verified, it is permanently wiped. Subsequent sessions rely entirely on RSA keypair authentication.
+*   **Zero Password Storage & Manual Passwordless Access**: 
+    *   **Automatic Mode**: The root password is only used in memory for the initial session to inject the SSH key, then permanently wiped.
+    *   **Manual Mode (Recommended)**: You **never need to input your root password in the App**. The App can generate an SSH keypair for you locally; simply copy the public key and manually append it to your Unraid's `authorized_keys` file to complete the setup.
+    *   All subsequent sessions rely entirely on high-strength SSH keypair authentication.
 *   **Open-Source & Auditable**: The core SSH connector, keygen, and key injection logic are completely open-source. Inspect the code here: [easy-unraid-ssh Repository](https://github.com/wlaosj/easy-unraid-ssh).
 *   **100% Direct Connection**: No telemetry, no backend servers, and no data forwarding. The client communicates directly with your server IP. Feel free to monitor the network traffic using any proxy tool.
