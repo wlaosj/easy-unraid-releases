@@ -27,12 +27,49 @@
 
 ### ✨ 核心功能亮点
 
-*   **📊 实时硬件仪表盘**：直观图形化展示 CPU 负载、各核心实时温度、内存使用率、实时网速及磁盘阵列读写流量，服务器状态一手掌控。
-*   **🐳 Docker 与 Compose 编排**：一键启停/重启 Docker 容器，实时流式查阅日志；**独家提供对 Docker Compose 项目一键部署与 YAML 语法高亮编辑的支持**，享受丝滑的项目编排。
-*   **💾 存储阵列深度监控**：精美图表化展示磁盘空间使用率，实时读取各个硬盘的读写速度、工作温度以及健康坏道（Errors）警报。
-*   **📁 极速文件管理器**：基于高安全性 SFTP 协议实现。**内置本地 HTTP 媒体流串流服务器，支持 4K 高清电影/无损音乐免下载极速在线播放**；支持 PDF 高清预览、ZIP 等压缩包在线目录树浏览与一键秒级解压。
-*   **🗑️ 误删回收站双重保护**：App 内置独立物理回收站缓冲机制，手机上误删的文件可暂存并一键原路还原，彻底杜绝宝贵数据意外被抹除。
-*   **🚀 虚拟机与全功能 SSH 终端**：支持管理虚拟机服务的启停；内置多会话高安全 SSH 终端控制台，让您随时随地进行深度服务器维护。
+#### 📊 实时硬件仪表盘
+直观图形化展示 CPU 负载、各核心实时温度、内存使用率、实时网速及磁盘阵列读写流量，服务器状态一手掌控。
+<p align="left">
+  <img src="screenshots/dashboard_ios.png" width="220" alt="Dashboard iOS"/>
+  <img src="screenshots/dashboard_mac.png" width="500" alt="Dashboard macOS"/>
+</p>
+<p align="left">
+  <img src="screenshots/cpu_ios.png" width="220" alt="CPU Usage iOS"/>
+  <img src="screenshots/cpu_mac.png" width="500" alt="CPU Usage macOS"/>
+</p>
+
+---
+
+#### 🐳 Docker 与 Compose 编排
+一键启停/重启 Docker 容器，实时流式查阅日志；**独家提供对 Docker Compose 项目一键部署与 YAML 语法高亮编辑的支持**，享受丝滑的项目编排。
+<p align="left">
+  <img src="screenshots/docker1_ios.png" width="220" alt="Docker iOS"/>
+  <img src="screenshots/docker1_mac.png" width="500" alt="Docker macOS"/>
+</p>
+
+---
+
+#### 💾 存储阵列深度监控
+精美图表化展示磁盘空间使用率，实时读取各个硬盘的读写速度、工作温度以及健康坏道（Errors）警报。
+
+---
+
+#### 📁 极速文件管理器
+基于高安全性 SFTP 协议实现。**内置本地 HTTP 媒体流串流服务器，支持 4K 高清电影/无损音乐免下载极速在线播放**；支持 PDF 高清预览、ZIP 等压缩包在线目录树浏览与一键秒级解压。
+<p align="left">
+  <img src="screenshots/file_ios.png" width="220" alt="File Manager iOS"/>
+  <img src="screenshots/file_mac.png" width="500" alt="File Manager macOS"/>
+</p>
+
+---
+
+#### 🗑️ 误删回收站双重保护
+App 内置独立物理回收站缓冲机制，手机上误删的文件可暂存并一键原路还原，彻底杜绝宝贵数据意外被抹除。
+
+---
+
+#### 🚀 虚拟机与全功能 SSH 终端
+支持管理虚拟机服务的启停；内置多会话高安全 SSH 终端控制台，让您随时随地进行深度服务器维护。
 
 ---
 
@@ -72,7 +109,7 @@
 
 > [!IMPORTANT]
 > **1. 密码零保留，物理层抹除**  
-> 无论何种模式，App 均不以 any 明文形式在本地保留您的 root 密码。配对成功后即走高安全的 RSA/ED25519 强加密 SSH 密钥对进行免密连接。
+> 无论何种模式，App 均不以任何明文形式在本地保留您的 root 密码。配对成功后即走高安全的 RSA/ED25519 强加密 SSH 密钥对进行免密连接。
 
 > [!TIP]
 > **2. 核心通信组件 100% 开源审计**  
@@ -91,12 +128,49 @@
 
 ### ✨ Key Features
 
-*   **📊 Real-time Dashboard**: Beautiful interactive charts displaying CPU load, individual core temperatures, memory usage, network bandwidth, and array read/write throughput.
-*   **🐳 Docker & Compose Orchestration**: Start, stop, and restart Docker containers and view live stream logs. **Exclusive support for Docker Compose project deployments and YAML editor** on both mobile and desktop.
-*   **💾 Storage Array Monitor**: Track disk utilization, read/write speeds, temperatures, and smart health errors in real-time.
-*   **📁 Powerful File Manager**: Full-featured SFTP file browser. **Built-in local HTTP streaming server enabling seekable 4K video & audio playback**; PDF viewer and online ZIP / TAR archive tree browser/extraction.
-*   **🗑️ Safe Trash Bin**: Integrated recycle bin support for file deletes. Easily restore files/folders to avoid accidental data loss.
-*   **🚀 VM Control & SSH Console**: Start, stop, or restart your Unraid virtual machines; built-in multi-session SSH console for advanced server maintenance.
+#### 📊 Real-time Dashboard
+Beautiful interactive charts displaying CPU load, individual core temperatures, memory usage, network bandwidth, and array read/write throughput.
+<p align="left">
+  <img src="screenshots/dashboard_ios.png" width="220" alt="Dashboard iOS"/>
+  <img src="screenshots/dashboard_mac.png" width="500" alt="Dashboard macOS"/>
+</p>
+<p align="left">
+  <img src="screenshots/cpu_ios.png" width="220" alt="CPU Usage iOS"/>
+  <img src="screenshots/cpu_mac.png" width="500" alt="CPU Usage macOS"/>
+</p>
+
+---
+
+#### 🐳 Docker & Compose Orchestration
+Start, stop, and restart Docker containers and view live stream logs. **Exclusive support for Docker Compose project deployments and YAML editor** on both mobile and desktop.
+<p align="left">
+  <img src="screenshots/docker1_ios.png" width="220" alt="Docker iOS"/>
+  <img src="screenshots/docker1_mac.png" width="500" alt="Docker macOS"/>
+</p>
+
+---
+
+#### 💾 Storage Array Monitor
+Track disk utilization, read/write speeds, temperatures, and smart health errors in real-time.
+
+---
+
+#### 📁 Powerful File Manager
+Full-featured SFTP file browser. **Built-in local HTTP streaming server enabling seekable 4K video & audio playback**; PDF viewer and online ZIP / TAR archive tree browser/extraction.
+<p align="left">
+  <img src="screenshots/file_ios.png" width="220" alt="File Manager iOS"/>
+  <img src="screenshots/file_mac.png" width="500" alt="File Manager macOS"/>
+</p>
+
+---
+
+#### 🗑️ Safe Trash Bin
+Integrated recycle bin support for file deletes. Easily restore files/folders to avoid accidental data loss.
+
+---
+
+#### 🚀 VM Control & SSH Console
+Start, stop, or restart your Unraid virtual machines; built-in multi-session SSH console for advanced server maintenance.
 
 ---
 
