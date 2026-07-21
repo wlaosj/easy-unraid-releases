@@ -139,6 +139,7 @@ jobs:
           cd build/macos/Build/Products/Release/
           chmod -R 755 "Easy Unraid.app"
           chmod +x "Easy Unraid.app/Contents/MacOS/"*
+          codesign --force --deep --sign - "Easy Unraid.app"
           brew install create-dmg
           create-dmg \
             --volname "Easy Unraid" \
