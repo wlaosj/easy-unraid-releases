@@ -84,7 +84,7 @@
 ---
 
 #### 📁 极速文件管理器
-基于高安全性 SFTP 协议实现。**内置本地 HTTP 媒体流串流服务器，支持 4K 高清电影/无损音乐免下载极速在线播放**；支持 PDF 高清预览、ZIP 等压缩包在线目录树浏览与一键秒级解压。
+基于高安全性 SFTP 协议实现。**支持键盘 Shift 键区间框选与 Cmd/Ctrl 自由多选，支持多文件批量上传**；内置后台传输任务中心与本地 HTTP 媒体流串流服务器，支持 4K 高清电影/无损音乐免下载在线播放、PDF 预览及 ZIP 在线秒级解压。
 <p align="left">
   <img src="screenshots/file_ios.png" height="330" alt="File Manager iOS"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -266,7 +266,7 @@ Start, stop, or restart your Unraid virtual machines; built-in multi-session SSH
 ---
 
 #### 📁 Powerful File Manager
-Full-featured SFTP file browser. **Built-in local HTTP streaming server enabling seekable 4K video & audio playback**; PDF viewer and online ZIP / TAR archive tree browser/extraction.
+Full-featured SFTP file browser. **Supports physical keyboard Shift range-selection, Cmd/Ctrl multi-selection, and multi-file batch uploads**; integrated background transfer task manager and local HTTP 4K streaming server.
 <p align="left">
   <img src="screenshots/file_ios.png" height="330" alt="File Manager iOS"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
