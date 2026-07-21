@@ -91,9 +91,13 @@ jobs:
           import os, base64, re
           raw_data = os.environ.get("ANDROID_KEYSTORE_BASE64", "")
           clean_data = re.sub(r"[^A-Za-z0-9+/=]", "", raw_data)
-          missing_padding = len(clean_data) % 4
-          if missing_padding:
-              clean_data += "=" * (4 - missing_padding)
+          rem = len(clean_data) % 4
+          if rem == 1:
+              clean_data = clean_data[:-1]
+          elif rem == 2:
+              clean_data += "=="
+          elif rem == 3:
+              clean_data += "="
           with open("android/app/key.jks", "wb") as f:
               f.write(base64.b64decode(clean_data))
           '
