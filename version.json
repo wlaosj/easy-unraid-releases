@@ -1,5 +1,5 @@
 {
-  "tag_name": "v1.0.0+4",
-  "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+4",
+  "tag_name": "v1.0.0+5",
+  "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.0.0+5",
   "body": "### 🇨🇳 中文更新日志\n* 🚀 **公测 Beta 版开启**：Easy Unraid 1.0.0 跨平台客户端正式开启公测！\n* 📊 **系统仪表盘**：原生图形化实时看板，轻松掌控 CPU、温度、内存、阵列及网络流量。\n* 📁 **文件管理器与串流**：基于 SFTP 极速文件管理，支持键盘 Shift 连选/Cmd多选与多文件批量上传；内置 HTTP 媒体流，支持 4K 视频免下载播放、PDF 预览及 ZIP 在线解压。\n* 🐳 **Docker & Compose**：一键管理容器与日志，支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑。\n* 🗑️ **物理回收站保护**：内置独立回收站防误删缓冲，支持文件一键原路还原。\n* 📱 **多端全平台覆盖**：公测首发支持 Android (ARM64)、macOS 及 Windows 三端客户端（iOS / 鸿蒙 NEXT 适配中）。\n* 🔑 **高强度密钥认证**：基于 SSH 密钥对免密握手，密码零本地残留，100% 直连无中转。\n\n### 🇺🇸 English Changelog\n* 🚀 **Public Beta Launch**: Easy Unraid 1.0.0 is now available in public beta!\n* 📊 **Native Dashboard**: Real-time stats for CPU, core temperatures, memory, array storage, and bandwidth.\n* 📁 **File Manager & Streaming**: SFTP browsing with physical keyboard Shift range-selection, Cmd multi-select & batch upload; built-in 4K HTTP media streaming, PDF viewer & ZIP extraction.\n* 🐳 **Docker & Compose**: Manage containers, view live logs, and deploy Docker Compose projects with YAML syntax highlighting.\n* 🗑️ **Safe Recycle Bin**: Integrated delete protection with one-click restore.\n* 📱 **Cross-Platform Support**: Initial public beta available for Android (ARM64), macOS, and Windows (iOS & HarmonyOS NEXT in development).\n* 🔑 **Zero Password Storage**: SSH keypair connection, 100% direct client-to-server connection."
 }
