@@ -1,5 +1,5 @@
 {
-  "tag_name": "v9.9.9+9999",
-  "body": "## 🧪 Easy Unraid 自动更新功能测试 (v9.9.9)\n\n### 📦 本次更新验证项：\n- ✨ **macOS 后台静默下载**：在 App 内部实时显示下载百分比与进度条\n- 🔄 **无感覆盖与重新拉起**：自动挂载解压、物理覆盖原包并重新打开\n- 🔑 **Keychain 零弹窗验证**：全流程不触发系统钥匙串验证\n\n> 提示：本版本为客户端更新流程实测包。",
+  "tag_name": "v1.0.0+1",
+  "body": "## 🚀 Easy Unraid 1.0.0 公测 Beta 版正式发布！\n\n- 📊 **系统仪表盘**：原生图形化实时看板，掌控 CPU、温度、内存、阵列及网络流量\n- 📁 **文件管理器与串流**：支持键盘 Shift 连选/Cmd多选与多文件批量上传，内置 4K HTTP 媒体流与 PDF/解压\n- 🐳 **Docker & Compose**：容器启停、实时日志、YAML高亮编辑与 Compose 一键部署\n- 🗑️ **物理回收站保护**：内置独立回收站缓冲防误删，支持文件一键原路还原\n- 📱 **多端全平台覆盖**：公测首发支持 Android (ARM64)、macOS 及 Windows 三端客户端",
   "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/latest"
 }
