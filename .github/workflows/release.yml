@@ -86,8 +86,13 @@ jobs:
             echo "Error: Missing Android signing secrets! Stopping build."
             exit 1
           fi
-          echo "Decoding Android Keystore..."
-          echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > android/app/key.jks 2>/dev/null || echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > android/app/key.jks
+          echo "Decoding Android Keystore via Python (100% robust)..."
+          python3 -c '
+          import os, base64
+          data = os.environ.get("ANDROID_KEYSTORE_BASE64", "")
+          with open("android/app/key.jks", "wb") as f:
+              f.write(base64.b64decode(data.strip()))
+          '
           echo "Creating key.properties..."
           echo "storePassword=$ANDROID_STORE_PASSWORD" > android/key.properties
           echo "keyPassword=$ANDROID_KEY_PASSWORD" >> android/key.properties
