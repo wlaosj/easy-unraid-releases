@@ -86,20 +86,12 @@ jobs:
             echo "Error: Missing Android signing secrets! Stopping build."
             exit 1
           fi
-          echo "Decoding Android Keystore via Super Python Sanitizer..."
+          echo "Decoding Android Keystore..."
           python3 -c '
-          import os, base64, re
-          raw_data = os.environ.get("ANDROID_KEYSTORE_BASE64", "")
-          clean_data = re.sub(r"[^A-Za-z0-9+/=]", "", raw_data)
-          rem = len(clean_data) % 4
-          if rem == 1:
-              clean_data = clean_data[:-1]
-          elif rem == 2:
-              clean_data += "=="
-          elif rem == 3:
-              clean_data += "="
+          import os, base64
+          raw_data = os.environ.get("ANDROID_KEYSTORE_BASE64", "").strip()
           with open("android/app/key.jks", "wb") as f:
-              f.write(base64.b64decode(clean_data))
+              f.write(base64.b64decode(raw_data))
           '
           echo "Creating key.properties..."
           echo "storePassword=$ANDROID_STORE_PASSWORD" > android/key.properties
