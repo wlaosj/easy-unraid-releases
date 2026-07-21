@@ -1,0 +1,5 @@
+{
+  "tag_name": "v9.9.9+9999",
+  "body": "## 🧪 Easy Unraid 自动更新功能测试 (v9.9.9)\n\n### 📦 本次更新验证项：\n- ✨ **macOS 后台静默下载**：在 App 内部实时显示下载百分比与进度条\n- 🔄 **无感覆盖与重新拉起**：自动挂载解压、物理覆盖原包并重新打开\n- 🔑 **Keychain 零弹窗验证**：全流程不触发系统钥匙串验证\n\n> 提示：本版本为客户端更新流程实测包。",
+  "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/latest"
+}
