@@ -137,6 +137,8 @@ jobs:
       - name: Create DMG File
         run: |
           cd build/macos/Build/Products/Release/
+          chmod -R 755 "Easy Unraid.app"
+          chmod +x "Easy Unraid.app/Contents/MacOS/"*
           brew install create-dmg
           create-dmg \
             --volname "Easy Unraid" \
