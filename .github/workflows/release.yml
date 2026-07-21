@@ -79,16 +79,20 @@ jobs:
       - name: Setup Android Signing
         env:
           ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
         run: |
-          if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
-            echo "Decoding Android Keystore..."
-            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > android/app/key.jks 2>/dev/null || echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > android/app/key.jks
-            echo "Creating key.properties..."
-            echo "storePassword=easyunraid123" > android/key.properties
-            echo "keyPassword=easyunraid123" >> android/key.properties
-            echo "keyAlias=key" >> android/key.properties
-            echo "storeFile=key.jks" >> android/key.properties
+          if [ -z "$ANDROID_KEYSTORE_BASE64" ] || [ -z "$ANDROID_KEY_PASSWORD" ] || [ -z "$ANDROID_STORE_PASSWORD" ]; then
+            echo "Error: Missing Android signing secrets! Stopping build."
+            exit 1
           fi
+          echo "Decoding Android Keystore..."
+          echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > android/app/key.jks 2>/dev/null || echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > android/app/key.jks
+          echo "Creating key.properties..."
+          echo "storePassword=$ANDROID_STORE_PASSWORD" > android/key.properties
+          echo "keyPassword=$ANDROID_KEY_PASSWORD" >> android/key.properties
+          echo "keyAlias=key" >> android/key.properties
+          echo "storeFile=key.jks" >> android/key.properties
 
       - name: Build Android arm64 APK
         run: flutter build apk --target-platform android-arm64 --build-name=${{ needs.get-version.outputs.build_name }} --build-number=${{ needs.get-version.outputs.build_number }}
