@@ -13,7 +13,7 @@
 <p align="center">
   <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Platform-Flutter-blue.svg?style=flat-square&logo=flutter" alt="Flutter"/></a>
   <a href="https://github.com/wlaosj/easy-unraid-releases/releases"><img src="https://img.shields.io/badge/Build-GitHub%20Actions-brightgreen?style=flat-square&logo=github-actions" alt="Actions"/></a>
-  <a href="https://github.com/wlaosj/easy-unraid-releases/releases/latest"><img src="https://img.shields.io/badge/Version-v1.0.1%2B7-orange?style=flat-square" alt="Version"/></a>
+  <a href="https://github.com/wlaosj/easy-unraid-releases/releases/latest"><img src="https://img.shields.io/badge/Version-v1.0.2%2B8-orange?style=flat-square" alt="Version"/></a>
   <a href="https://t.me/+7jcTMePlNVwwZjg1"><img src="https://img.shields.io/badge/Telegram-Group-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram Group"/></a>
   <img src="https://img.shields.io/badge/OS-Android%20%7C%20macOS%20%7C%20Windows%20%7C%20iOS%20%7C%20Harmony-blueviolet?style=flat-square" alt="OS Support"/>
 </p>
@@ -69,6 +69,17 @@
 
 ---
 
+#### 🔒 SSH 隧道加密穿透（安全外网双模）
+**支持直连与加密隧道双模连接**。在隧道模式下，App 通过在后台建立安全的 SSH 隧道进行本地端口转发，将 Unraid API 的通信完全封装在加密链路中，让您在外网**仅需暴露一个 SSH 端口**即可安全管理整台服务器，杜绝 Web GUI 暴露公网的安全隐患。
+
+---
+
+#### 🛡️ 一键禁用密码登录与安全日志审计
+* **SSH 密码一键防爆破**：支持在 App 中一键关闭 Unraid 的 SSH 密码登录（强制仅限密钥免密登录），彻底杜绝因弱密码引起的暴力破解风险。
+* **安全日志可视化审计**：实时解析系统安全日志，图形化直观展示“成功登录”和“失败尝试”的多维度统计（细分展示 SSH 与 WebUI 的占比），并以极具辨识度的图标展示详细的会话条目。
+
+---
+
 #### 🐳 Docker 与 Compose 编排
 一键启停/重启 Docker 容器，实时流式查阅日志；**独家提供对 Docker Compose 项目一键部署与 YAML 语法高亮编辑的支持**，享受丝滑的项目编排。
 <p align="left">
@@ -85,7 +96,7 @@
 ---
 
 #### 📁 极速文件管理器
-基于高安全性 SFTP 协议实现。**支持键盘 Shift 键区间框选与 Cmd/Ctrl 自由多选，支持多文件批量上传**；内置后台传输任务中心与本地 HTTP 媒体流串流服务器，支持 4K 高清电影/无损音乐免下载在线播放、PDF 预览及 ZIP 在线秒级解压。
+基于高安全性 SFTP 协议实现。**支持多选与批量上传**，支持手机系统快捷手势回退上级目录；内置后台传输任务中心与本地 HTTP 媒体流串流服务器，支持 4K 高清视频/无损音频免下载在线播放、PDF/图片预览本地缓存；**支持 ZIP/TAR/TGZ 等双向秒级解压缩与打包压缩**，以及**深度全局递归搜索**（基于 find 深度检索当前目录及子目录下的文件，并直观呈现物理绝对路径）。
 <p align="left">
   <img src="screenshots/file_ios.png" height="330" alt="File Manager iOS"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -100,7 +111,7 @@ App 内置独立物理回收站缓冲机制，手机上误删的文件可暂存�
 ---
 
 #### 🚀 虚拟机与全功能 SSH 终端
-支持管理虚拟机服务的启停；内置多会话高安全 SSH 终端控制台，让您随时随地进行深度服务器维护。
+支持管理虚拟机服务的启停；内置多会话高安全 SSH 终端控制台（兼容 OpenSSH 交互式键盘验证加固），支持多服务器隔离配置与横向切换卡片自动居中对齐，让您随时随地进行深度服务器维护。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -157,18 +168,20 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 | :--- | :---: | :---: |
 | **📊 实时硬件仪表盘** (CPU/内存/网速实时折线看板) | **✅ 免费** | **✅ 免费** |
 | **💾 存储阵列监控** (磁盘空间/温度/Errors坏道警告) | **✅ 免费** | **✅ 免费** |
-| **⚙️ 基础系统配置** (多服务器/SSH免密自动与手动模式) | **✅ 免费** | **✅ 免费** |
-| **📁 极速文件管理器** (SFTP文件管理/在线 4K 媒体串流/PDF/解压) | ❌ 需激活 | **✅ 解锁** |
+| **⚙️ 基础系统配置** (多服务器配置/横向自动对齐切换) | **✅ 免费** | **✅ 免费** |
+| **🔒 SSH 隧道与安全双模连接** (直连模式/加密隧道穿透) | **✅ 免费** | **✅ 免费** |
+| **🛡️ 登录安全审计与可视化面板** (成功/失败日志解析统计) | **✅ 免费** | **✅ 免费** |
+| **📁 极速文件管理器** (SFTP文件管理/在线 4K 媒体串流/PDF/解包与打包/全局深度搜索) | ❌ 需激活 | **✅ 解锁** |
 | **🗑️ 误删回收站保护** (App层物理回收站防灾缓冲) | ❌ 需激活 | **✅ 解锁** |
 | **🐳 Docker 容器与 Compose 编排** (启停/日志/YAML高亮编辑/一键部署) | ❌ 需激活 | **✅ 解锁** |
-| **🚀 虚拟机控制与 SSH 会话终端** (VM开关/全功能终端) | ❌ 需激活 | **✅ 解锁** |
+| **🚀 虚拟机控制与 SSH 会话终端** (VM开关/全功能终端/一键禁用密码登录) | ❌ 需激活 | **✅ 解锁** |
 
 > [!NOTE]
 > 授权购买激活方式请在 App 内的 **「设置 ➔ 解锁专业版」** 中查看。
 
 > [!TIP]
 > **💡 良心授权政策：一次激活，全家共享，不限设备**  
-> 专业版授权**与您的 Unraid 服务器引导 U 盘唯一硬件 GUID 强绑定**。一旦服务器成功激活，您所有连入该服务器的手机、平板、Mac 或 Windows 电脑等客户端**均会自动解锁并免费畅享全部 PRO 版专业功能**，无需重复付费。
+> 专业版授权**与您的 Unraid 服务器引导 U 盘唯一硬件 GUID 绑定（单授权最多可同时绑定 3 台 Unraid 服务器）**。一旦服务器成功激活，您所有连入该服务器的手机、平板、Mac 或 Windows 电脑等客户端**均会自动解锁并免费畅享全部 PRO 版专业功能**，无需重复付费。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -254,6 +267,17 @@ Beautiful interactive charts displaying CPU load, individual core temperatures, 
 
 ---
 
+#### 🔒 Secure SSH Tunneling (Dual-mode Connection)
+**Supports both Direct and SSH Tunnel connection modes**. In tunnel mode, the App establishes a secure SSH tunnel via local port forwarding, encapsulating all Unraid API traffic in an encrypted link. This allows you to manage your server remotely while **only exposing a single SSH port** to the public internet.
+
+---
+
+#### 🛡️ SSH Password Auth Disable & Security Audit
+* **One-Click SSH Password Lock**: Disable SSH password authentication directly from the App (enforcing secure SSH key-only login), eliminating brute force attack vulnerabilities.
+* **Security Logs Audit Panel**: Real-time parsing of system security logs. Displays Successful/Failed login statistics (breakdown of SSH and WebUI ratios) with specific icons for easy session auditing.
+
+---
+
 #### 🐳 Docker & Compose Orchestration
 Start, stop, and restart Docker containers and view live stream logs. **Exclusive support for Docker Compose project deployments and YAML editor** on both mobile and desktop.
 <p align="left">
@@ -269,13 +293,8 @@ Track disk utilization, read/write speeds, temperatures, and smart health errors
 
 ---
 
-#### 🚀 VM Control & SSH Console
-Start, stop, or restart your Unraid virtual machines; built-in multi-session SSH console for advanced server maintenance.
-
----
-
 #### 📁 Powerful File Manager
-Full-featured SFTP file browser. **Supports physical keyboard Shift range-selection, Cmd/Ctrl multi-selection, and multi-file batch uploads**; integrated background transfer task manager and local HTTP 4K streaming server.
+Full-featured SFTP file browser. **Supports multi-selection, batch uploads**, and quick system swipe gestures to go back to the parent directory; integrated background transfer manager and local HTTP 4K streaming server, with local cache support for PDFs and image thumbnails. **Supports bidirectional ZIP/TAR compression and extraction**, and **deep recursive search** (powered by GNU find to locate files in subdirectories instantly and display full absolute paths).
 <p align="left">
   <img src="screenshots/file_ios.png" height="330" alt="File Manager iOS"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -286,6 +305,11 @@ Full-featured SFTP file browser. **Supports physical keyboard Shift range-select
 
 #### 🗑️ Safe Trash Bin
 Integrated recycle bin support for file deletes. Easily restore files/folders to avoid accidental data loss.
+
+---
+
+#### 🚀 VM Control & SSH Console
+Start, stop, or restart your Unraid virtual machines; built-in multi-session SSH console (compatible with keyboard-interactive authentication) and multi-server configuration isolation with server card auto-centering animations.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -342,18 +366,20 @@ Easy Unraid adopts a sustainable model: "Essential monitoring features are perma
 | :--- | :---: | :---: |
 | **📊 Real-time Dashboard** (CPU/RAM/Network real-time stats) | **✅ Free** | **✅ Free** |
 | **💾 Array Monitor** (Disk utilization/temperatures/smart errors) | **✅ Free** | **✅ Free** |
-| **⚙️ Server Configurations** (Multi-server/SSH key pairing) | **✅ Free** | **✅ Free** |
-| **📁 File Manager** (SFTP browsing/4K stream server/PDF/unzip) | ❌ Pro Only | **✅ Unlocked** |
+| **⚙️ Server Configurations** (Multi-server configuration & switching) | **✅ Free** | **✅ Free** |
+| **🔒 SSH Tunneling** (Direct and secure local port forwarding) | **✅ Free** | **✅ Free** |
+| **🛡️ Security Audit Logs** (Login session auditing and metrics) | **✅ Free** | **✅ Free** |
+| **📁 File Manager** (SFTP / 4K streaming / ZIP & TAR / Deep search) | ❌ Pro Only | **✅ Unlocked** |
 | **🗑️ Safe Recycle Bin** (App-level delete protection) | ❌ Pro Only | **✅ Unlocked** |
 | **🐳 Docker & Compose** (Logs/YAML editor/deployments) | ❌ Pro Only | **✅ Unlocked** |
-| **🚀 VM & SSH Console** (Virtual machines/multi-session terminal) | ❌ Pro Only | **✅ Unlocked** |
+| **🚀 VM & SSH Console** (Virtual machines/SSH terminal/Disable password auth) | ❌ Pro Only | **✅ Unlocked** |
 
 > [!NOTE]
 > License activation options and detailed pricing are available in the App under **"Settings ➔ Unlock Pro"**.
 
 > [!TIP]
 > **💡 Sustainable Licensing Policy: One-Time Server Activation, Unlimited Clients**  
-> The Pro license is **directly bound to your Unraid server's unique Flash Drive GUID**. Once your server is activated, all client devices (phones, tablets, Mac, or Windows PCs) connecting to this server **will automatically unlock and enjoy all PRO features** without any device limit or extra charges.
+> The Pro license is **directly bound to your Unraid server's unique Flash Drive GUID (supports binding up to 3 Unraid servers per license)**. Once your server is activated, all client devices (phones, tablets, Mac, or Windows PCs) connecting to this server **will automatically unlock and enjoy all PRO features** without any device limit or extra charges.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
