@@ -13,7 +13,7 @@
 <p align="center">
   <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Platform-Flutter-blue.svg?style=flat-square&logo=flutter" alt="Flutter"/></a>
   <a href="https://github.com/wlaosj/easy-unraid-releases/releases"><img src="https://img.shields.io/badge/Build-GitHub%20Actions-brightgreen?style=flat-square&logo=github-actions" alt="Actions"/></a>
-  <a href="https://github.com/wlaosj/easy-unraid-releases/releases/latest"><img src="https://img.shields.io/badge/Version-v1.0.2%2B8-orange?style=flat-square" alt="Version"/></a>
+  <a href="https://github.com/wlaosj/easy-unraid-releases/releases/latest"><img src="https://img.shields.io/badge/Version-v1.0.3%2B9-orange?style=flat-square" alt="Version"/></a>
   <a href="https://t.me/+7jcTMePlNVwwZjg1"><img src="https://img.shields.io/badge/Telegram-Group-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram Group"/></a>
   <img src="https://img.shields.io/badge/OS-Android%20%7C%20macOS%20%7C%20Windows%20%7C%20iOS%20%7C%20Harmony-blueviolet?style=flat-square" alt="OS Support"/>
 </p>
@@ -69,8 +69,8 @@
 
 ---
 
-#### 🔒 SSH 隧道加密穿透（安全外网双模）
-**支持直连与加密隧道双模连接**。在隧道模式下，App 通过在后台建立安全的 SSH 隧道进行本地端口转发，将 Unraid API 的通信完全封装在加密链路中，让您在外网**仅需暴露一个 SSH 端口**即可安全管理整台服务器，杜绝 Web GUI 暴露公网的安全隐患。
+#### 🔒 SSH 隧道加密穿透与智能 WebUI 路由
+**支持直连与加密隧道双模连接**。在穿透模式下，App 后台自动建立安全的动态 SSH 本地转发。电脑端 (macOS/Windows) 直接唤起系统外置默认浏览器（方便 Cookie 与密码自动填充），手机端 (Android/iOS) 智能唤起升级后的双引擎内置 Webview 弹窗（配合焦点防断连锁，完美避免密码弹窗导致的重定向连接拒绝），实现极致安全的零暴露容器 WebUI 管理。
 
 ---
 
@@ -267,8 +267,8 @@ Beautiful interactive charts displaying CPU load, individual core temperatures, 
 
 ---
 
-#### 🔒 Secure SSH Tunneling (Dual-mode Connection)
-**Supports both Direct and SSH Tunnel connection modes**. In tunnel mode, the App establishes a secure SSH tunnel via local port forwarding, encapsulating all Unraid API traffic in an encrypted link. This allows you to manage your server remotely while **only exposing a single SSH port** to the public internet.
+#### 🔒 Secure SSH Tunneling & Smart WebUI Routing
+**Supports both Direct and SSH Tunnel connection modes**. In tunnel mode, the App dynamically maps ports locally in the background. Desktop clients (macOS/Windows) seamlessly launch external default browsers to preserve passwords and cookies, while mobile clients (Android/iOS) launch a custom in-app WebView equipped with a focus-loss prevention lock to ensure redirection succeeds even during system autofill overlays.
 
 ---
 
