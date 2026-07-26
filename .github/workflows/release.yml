@@ -233,6 +233,15 @@ jobs:
           api-key-id: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
           api-private-key: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
 
+      - name: Download ShareExtension Provisioning Profiles (下载快捷转存扩展描述文件)
+        uses: apple-actions/download-provisioning-profiles@v3
+        with:
+          bundle-id: 'com.wlaosj.easyUnraid.ShareExtension'
+          profile-type: 'APP_STORE'
+          issuer-id: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          api-key-id: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          api-private-key: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
