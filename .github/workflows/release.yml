@@ -281,9 +281,11 @@ jobs:
 
       - name: Upload to App Store Connect (TestFlight)
         run: |
+          IPA_PATH=$(ls build/ios/ipa/*.ipa | head -n 1)
+          echo "Found IPA at: $IPA_PATH"
           xcrun altool --upload-app \
             --type ios \
-            --file build/ios/ipa/*.ipa \
+            --file "$IPA_PATH" \
             --apiKey ${{ secrets.APP_STORE_CONNECT_KEY_ID }} \
             --apiIssuer ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
 
