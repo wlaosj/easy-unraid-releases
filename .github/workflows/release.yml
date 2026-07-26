@@ -219,8 +219,7 @@ jobs:
         uses: apple-actions/download-provisioning-profiles@v3
         with:
           bundle-id: 'com.wlaosj.easyUnraid'
-          profile-type: 'APP_STORE'
-          profile-name: 'EasyUnraid AppStore Profile'
+          profile-type: 'IOS_APP_STORE'
           issuer-id: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
           api-key-id: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
           api-private-key: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
@@ -229,8 +228,7 @@ jobs:
         uses: apple-actions/download-provisioning-profiles@v3
         with:
           bundle-id: 'com.wlaosj.easyUnraid.UnraidWidget'
-          profile-type: 'APP_STORE'
-          profile-name: 'Widget AppStore Profile'
+          profile-type: 'IOS_APP_STORE'
           issuer-id: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
           api-key-id: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
           api-private-key: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
@@ -239,8 +237,7 @@ jobs:
         uses: apple-actions/download-provisioning-profiles@v3
         with:
           bundle-id: 'com.wlaosj.easyUnraid.ShareExtension'
-          profile-type: 'APP_STORE'
-          profile-name: 'Share AppStore Profile'
+          profile-type: 'IOS_APP_STORE'
           issuer-id: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
           api-key-id: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
           api-private-key: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
