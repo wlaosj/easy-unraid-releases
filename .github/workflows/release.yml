@@ -268,7 +268,8 @@ jobs:
           flutter build ipa --release \
             --export-method app-store \
             --build-name=${{ needs.get-version.outputs.build_name }} \
-            --build-number=${{ needs.get-version.outputs.build_number }}
+            --build-number=${{ needs.get-version.outputs.build_number }} \
+            CODE_SIGN_STYLE=Manual
 
       - name: Setup App Store Connect Private Key
         env:
