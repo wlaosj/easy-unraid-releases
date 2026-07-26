@@ -266,7 +266,6 @@ jobs:
       - name: Build IPA
         run: |
           flutter build ipa --release \
-            --no-codesign \
             --export-method app-store \
             --build-name=${{ needs.get-version.outputs.build_name }} \
             --build-number=${{ needs.get-version.outputs.build_number }}
@@ -281,7 +280,7 @@ jobs:
 
       - name: Upload to App Store Connect (TestFlight)
         run: |
-          IPA_PATH=$(ls build/ios/ipa/*.ipa | head -n 1)
+          IPA_PATH=$(find build/ios/ipa -name "*.ipa" | head -n 1)
           echo "Found IPA at: $IPA_PATH"
           xcrun altool --upload-app \
             --type ios \
