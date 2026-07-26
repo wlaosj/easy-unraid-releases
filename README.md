@@ -198,7 +198,7 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 | **🤖 安卓端 (Android)** | `.apk` | 推荐下载 `arm64-v8a` 版本以获得最佳硬件加速性能。 |
 | **💻 苹果端 (macOS)** | `.dmg` | 下载后双击打开，将 `Easy Unraid` 拖入 `Applications` 文件夹即可。 |
 | **🔌 微软端 (Windows)** | `.zip` | 下载后解压，双击运行文件夹内的 `easy_unraid.exe` 即可（免安装）。 |
-| **📱 苹果手机端 (iOS)** | `App Store` | 处于内部技术评估与开发阶段，上架规划中，敬请期待。 |
+| **📱 苹果手机端 (iOS)** | `TestFlight` | 🟢 **已开启 TestFlight 公测！** 目前苹果官方正在进行公测前的合规初审。审核通过后将在此公布 [万能公测链接] 供您直接点开加入下载！您也可以随时将您的 Apple ID 邮箱发给我们以获取直接内测邀请！ |
 | **🇨🇳 鸿蒙端 (HarmonyOS)** | `HAP / APP` | 纯血鸿蒙 (NEXT) 本地全链路已验证跑通。目前正处于技术适配阶段，静候官方发布支持 Dart 3.0+ 的编译 SDK，敬请期待。（注：HarmonyOS 4.x 及早先版本用户可直接下载运行 Android 64位安装包） |
 
 ---
@@ -396,7 +396,7 @@ Please visit the **[👉 Releases Page](https://github.com/wlaosj/easy-unraid-re
 | **🤖 Android** | `.apk` | `arm64-v8a` is highly recommended for best hardware acceleration. |
 | **💻 macOS** | `.dmg` | Double-click to open and drag `Easy Unraid` into your `Applications` folder. |
 | **🔌 Windows** | `.zip` | Extract and double-click `easy_unraid.exe` to run (portable). |
-| **📱 iOS** | `App Store` | Under technical evaluation & development. Stay tuned! |
+| **📱 iOS** | `TestFlight` | 🟢 **Live on TestFlight!** Apple is currently reviewing the build. The public link will be published here once approved. You can also share your Apple ID email with us for a direct invite! |
 | **🇨🇳 HarmonyOS** | `HAP / APP` | HarmonyOS NEXT local pipeline validated. Currently under adaptation, awaiting official Flutter SDK with Dart 3.0+ support. (Note: HarmonyOS 4.x and below users can download and run the Android package directly) |
 
 ---
