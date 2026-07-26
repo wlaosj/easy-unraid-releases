@@ -271,6 +271,14 @@ jobs:
             --build-name=${{ needs.get-version.outputs.build_name }} \
             --build-number=${{ needs.get-version.outputs.build_number }}
 
+      - name: Setup App Store Connect Private Key
+        env:
+          API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.private_keys
+          echo "$API_PRIVATE_KEY" > ~/.private_keys/AuthKey_${API_KEY_ID}.p8
+
       - name: Upload to App Store Connect (TestFlight)
         run: |
           xcrun altool --upload-app \
