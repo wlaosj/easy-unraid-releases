@@ -266,6 +266,7 @@ jobs:
       - name: Build IPA
         run: |
           flutter build ipa --release \
+            --no-codesign \
             --export-method app-store \
             --build-name=${{ needs.get-version.outputs.build_name }} \
             --build-number=${{ needs.get-version.outputs.build_number }}
