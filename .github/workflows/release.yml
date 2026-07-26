@@ -195,11 +195,92 @@ jobs:
           path: build/windows/x64/runner/Release/Easy-Unraid-Windows.zip
 
   # --------------------------------------------------
+  # 3.5 编译 iOS Release (IPA 包并推送到 TestFlight)
+  # --------------------------------------------------
+  build-ios:
+    name: Build iOS IPA
+    runs-on: macos-latest
+    needs: get-version
+    steps:
+      - name: Checkout Private Code
+        uses: actions/checkout@v4
+        with:
+          repository: wlaosj/easy-unraid
+          token: ${{ secrets.RELEASE_TOKEN }}
+
+      - name: Install Apple Certificate & Provisioning Profile (导入证书与描述文件)
+        uses: apple-actions/import-codesign-certs@v3
+        with:
+          p12-file-base64: ${{ secrets.APP_STORE_DIST_P12_BASE64 }}
+          p12-password: ${{ secrets.APP_STORE_DIST_P12_PASSWORD }}
+          keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
+
+      - name: Download Provisioning Profiles (下载主 App 描述文件)
+        uses: apple-actions/download-provisioning-profiles@v3
+        with:
+          bundle-id: 'com.wlaosj.easyUnraid'
+          profile-type: 'APP_STORE'
+          issuer-id: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          api-key-id: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          api-private-key: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+
+      - name: Download Widget Provisioning Profiles (下载小组件描述文件)
+        uses: apple-actions/download-provisioning-profiles@v3
+        with:
+          bundle-id: 'com.wlaosj.easyUnraid.UnraidWidget'
+          profile-type: 'APP_STORE'
+          issuer-id: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          api-key-id: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          api-private-key: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Get Dependencies
+        run: flutter pub get
+
+      - name: Install Pods
+        run: |
+          cd ios
+          pod install
+          cd ..
+
+      - name: Build IPA
+        run: |
+          flutter build ipa --release \
+            --export-method app-store \
+            --build-name=${{ needs.get-version.outputs.build_name }} \
+            --build-number=${{ needs.get-version.outputs.build_number }}
+
+      - name: Upload to App Store Connect (TestFlight)
+        run: |
+          xcrun altool --upload-app \
+            --type ios \
+            --file build/ios/ipa/*.ipa \
+            --apiKey ${{ secrets.APP_STORE_CONNECT_KEY_ID }} \
+            --apiIssuer ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+
+      - name: Upload iOS Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-ipa
+          path: build/ios/ipa/*.ipa
+
+  # --------------------------------------------------
   # 4. 创建 GitHub Release 并更新 version.json
   # --------------------------------------------------
   publish-release:
     name: Publish Release
-    needs: [get-version, build-android, build-macos, build-windows]
+    needs: [get-version, build-android, build-macos, build-windows, build-ios]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Private Code for Changelog
@@ -226,11 +307,18 @@ jobs:
           name: windows-zip
           path: artifacts/
 
+      - name: Download iOS Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: ios-ipa
+          path: artifacts/
+
       - name: Rename Files for Release
         run: |
           mkdir -p artifacts
           cd artifacts/
           mv app-release.apk Easy-Unraid-Android.apk || true
+          mv *.ipa Easy-Unraid-iOS.ipa || true
           ls -la
 
       - name: Create GitHub Release
