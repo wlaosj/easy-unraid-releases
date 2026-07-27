@@ -107,6 +107,7 @@ jobs:
         with:
           name: android-apks
           path: build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 1
 
   # --------------------------------------------------
   # 2. 编译 macOS Release (DMG 磁盘映像)
@@ -156,6 +157,7 @@ jobs:
         with:
           name: macos-dmg
           path: build/macos/Build/Products/Release/Easy-Unraid-macOS.dmg
+          retention-days: 1
 
   # --------------------------------------------------
   # 3. 编译 Windows Release (ZIP 压缩包)
@@ -193,6 +195,7 @@ jobs:
         with:
           name: windows-zip
           path: build/windows/x64/runner/Release/Easy-Unraid-Windows.zip
+          retention-days: 1
 
   # --------------------------------------------------
   # 3.5 编译 iOS Release (IPA 包并推送到 TestFlight)
@@ -299,6 +302,7 @@ jobs:
         with:
           name: ios-ipa
           path: build/ios/ipa/*.ipa
+          retention-days: 1
 
   # --------------------------------------------------
   # 4. 创建 GitHub Release 并更新 version.json
