@@ -38,35 +38,54 @@
     *   [🌐 Remote Access & Security](#remote-en)
     *   [💎 Free vs Pro Edition](#free-vs-pro-en)
     *   [📥 Downloads](#downloads-en)
-    *   [🛡️ Security & Privacy](#security-en)
+    *   [🛡️ Securi### ✨ 核心功能亮点
 
-</details>
-
----
-
-<a name="intro-zh"></a>
-
-## 🇨🇳 中文介绍
-
-**Easy Unraid** 是一款专为 Unraid 系统量身打造的跨平台客户端管理器。我们致力于打破传统的浏览器 WebUI 限制，为您在手机和电脑端提供流畅的原生交互、精美的可视化监控看板与深度系统管理服务。
-
-<a name="features-zh"></a>
-
-### ✨ 核心功能亮点
-
-#### 📊 实时硬件仪表盘
-直观图形化展示 CPU 负载、各核心实时温度、内存使用率、实时网速及磁盘阵列读写流量，服务器状态一手掌控。
-
+#### 📊 实时硬件监测
+采用高保真正方形网格背景图表，直观展示 CPU/GPU 负载、核心温度、内存、网速及阵列流量；多维度图表时间轴垂直对齐，跨指标走势关联一目了然。
 
 ---
 
-#### 🔒 SSH 隧道加密穿透与智能 WebUI 路由
-**支持直连与加密隧道双模连接**。在穿透模式下，App 后台自动建立安全的动态 SSH 本地转发。电脑端 (macOS/Windows) 直接唤起系统外置默认浏览器（方便 Cookie 与密码自动填充），手机端 (Android/iOS) 智能唤起升级后的双引擎内置 Webview 弹窗（配合焦点防断连锁，完美避免密码弹窗导致的重定向连接拒绝），实现极致安全的零暴露容器 WebUI 管理。
+#### 🔒 安全隧道穿透与 WebUI 路由
+支持直连与 SSH 隧道双模连接。后台自动建立安全的本地端口转发，配合防断连内置 WebView，实现零公网暴露的高安全级别容器网页管理。
 
 ---
 
-#### 🛡️ 一键禁用密码登录与安全日志审计
-* **SSH 密码一键防爆破**：支持在 App 中一键关闭 Unraid 的 SSH 密码登录（强制仅限密钥免密登录），彻底杜绝因弱密码引起的暴力破解风险。
+#### 🛡️ 密钥防护与日志安全审计
+支持一键禁用 Unraid 宿主机 SSH 密码登录（强制密钥验证，防暴力破解）；实时解析系统安全日志，图形化审计 WebUI 与 SSH 登录活动。
+
+---
+
+#### 🐳 Docker & Compose 编排
+一键控制容器启停/重启并阅读流式日志；提供容器新版本镜像升级红点提示；**独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑**。
+
+---
+
+#### 💾 3D 拟物化阵列前面板
+拟物化仿真复刻 NAS 物理磁盘前面板，实时监测各硬盘读写速度、工作温度、休眠（Spin Down）状态及 Errors 坏道警报。
+
+---
+
+#### 📁 极速文件管理器与分享转存
+基于安全 SFTP 协议，支持多选、压缩解压与深度全局递归搜索；内置 4K 媒体流播服务；支持 iOS/Android 系统级快捷分享转存，以及 **macOS 原生全局拖拽上传**。
+
+---
+
+#### 🗑️ 误删防灾回收站
+内置独立物理回收站缓冲机制，误删文件可快速一键原路还原，避免由于操作失误造成宝贵数据永久丢失。
+
+---
+
+#### 🚀 虚拟机控制与内置 SSH 终端
+支持虚拟机的状态控制并内置 VNC 远程控制台；集成高安全性多会话 SSH 终端，专为移动端交互与键盘输入进行体验精调。
+
+---
+
+#### 🎨 桌面集成与个性化定制
+提供拟物化前面板 iOS/Android 桌面小组件；适配 macOS 状态栏托盘，支持自定义顶部标题栏渐变预设及本地壁纸背景。
+
+<p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
+
+---��持在 App 中一键关闭 Unraid 的 SSH 密码登录（强制仅限密钥免密登录），彻底杜绝因弱密码引起的暴力破解风险。
 * **安全日志可视化审计**：实时解析系统安全日志，图形化直观展示“成功登录”和“失败尝试”的多维度统计（细分展示 SSH 与 WebUI 的占比），并以极具辨识度的图标展示详细的会话条目。
 
 ---
@@ -236,46 +255,47 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 <a name="features-en"></a>
 
 #### 📊 Real-time Dashboard
-Beautiful interactive charts displaying CPU load, individual core temperatures, memory usage, network bandwidth, and array read/write throughput.
-
-
----
-
-#### 🔒 Secure SSH Tunneling & Smart WebUI Routing
-**Supports both Direct and SSH Tunnel connection modes**. In tunnel mode, the App dynamically maps ports locally in the background. Desktop clients (macOS/Windows) seamlessly launch external default browsers to preserve passwords and cookies, while mobile clients (Android/iOS) launch a custom in-app WebView equipped with a focus-loss prevention lock to ensure redirection succeeds even during system autofill overlays.
+Displays CPU/GPU load, core temperatures, memory, and bandwidth through high-fidelity grid charts; features vertically synchronized time-axes for aligned metric tracking.
 
 ---
 
-#### 🛡️ SSH Password Auth Disable & Security Audit
-* **One-Click SSH Password Lock**: Disable SSH password authentication directly from the App (enforcing secure SSH key-only login), eliminating brute force attack vulnerabilities.
-* **Security Logs Audit Panel**: Real-time parsing of system security logs. Displays Successful/Failed login statistics (breakdown of SSH and WebUI ratios) with specific icons for easy session auditing.
+#### 🔒 Secure Tunneling & Smart WebUI Routing
+Supports both Direct and SSH Tunnel modes. Automates local port forwarding and uses an optimized in-app WebView for password-safe, zero-public-exposure container administration.
+
+---
+
+#### 🛡️ Key-Based Security & Logs Auditing
+Enforce key-only authentication by disabling SSH password login with one click; features real-time parsing and graphical auditing of successful and failed SSH/WebUI log sessions.
 
 ---
 
 #### 🐳 Docker & Compose Orchestration
-Start, stop, and restart Docker containers and view live stream logs. **Exclusive support for Docker Compose project deployments and YAML editor** on both mobile and desktop.
-
-
----
-
-#### 💾 Storage Array Monitor
-Track disk utilization, read/write speeds, temperatures, and smart health errors in real-time.
+Control container states and view live logs. Displays container update indicators and **exclusively supports Docker Compose deployment and YAML syntax highlight editing**.
 
 ---
 
-#### 📁 Powerful File Manager
-Full-featured SFTP file browser. **Supports multi-selection, batch uploads**, and quick system swipe gestures to go back to the parent directory; integrated background transfer manager and local HTTP 4K streaming server, with local cache support for PDFs and image thumbnails. **Supports bidirectional ZIP/TAR compression and extraction**, and **deep recursive search** (powered by GNU find to locate files in subdirectories instantly and display full absolute paths).
-
-
----
-
-#### 🗑️ Safe Trash Bin
-Integrated recycle bin support for file deletes. Easily restore files/folders to avoid accidental data loss.
+#### 💾 3D Skeuomorphic Array Panel
+Simulates a real NAS hardware chassis with active drive bay LEDs. Displays real-time read/write speeds, temps, standby/sleep states, and bad sector warnings.
 
 ---
 
-#### 🚀 VM Control & SSH Console
-Start, stop, or restart your Unraid virtual machines; built-in multi-session SSH console (compatible with keyboard-interactive authentication) and multi-server configuration isolation with server card auto-centering animations.
+#### 📁 Advanced File Manager & Share Extension
+SFTP file browser with ZIP/TAR compression, recursive search, and 4K media streaming. Integrates iOS/Android share sheets for quick uploads and **macOS global drag-and-drop transfers**.
+
+---
+
+#### 🗑️ Safe Recycle Bin
+Provides an in-app recycle bin buffer with one-click file recovery to safeguard your valuable data against accidental deletion.
+
+---
+
+#### 🚀 VM Power Control & SSH Terminal
+Manage VM power states with in-app VNC console support. Features a multi-session secure SSH terminal optimized for mobile gestures and text input.
+
+---
+
+#### 🎨 Customization & Widgets
+Skeuomorphic iOS/Android home screen widgets, macOS menu bar tray utility, and customizable dashboard header backgrounds.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
