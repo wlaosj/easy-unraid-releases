@@ -56,16 +56,7 @@
 
 #### 📊 实时硬件仪表盘
 直观图形化展示 CPU 负载、各核心实时温度、内存使用率、实时网速及磁盘阵列读写流量，服务器状态一手掌控。
-<p align="left">
-  <img src="screenshots/dashboard_ios.png" height="330" alt="Dashboard iOS"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/dashboard_mac.png" height="330" alt="Dashboard macOS"/>
-</p>
-<p align="left">
-  <img src="screenshots/cpu_ios.png" height="330" alt="CPU Usage iOS"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/cpu_mac.png" height="330" alt="CPU Usage macOS"/>
-</p>
+
 
 ---
 
@@ -82,11 +73,7 @@
 
 #### 🐳 Docker 与 Compose 编排
 一键启停/重启 Docker 容器，实时流式查阅日志；**独家提供对 Docker Compose 项目一键部署与 YAML 语法高亮编辑的支持**，享受丝滑的项目编排。
-<p align="left">
-  <img src="screenshots/docker1_ios.png" height="330" alt="Docker iOS"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/docker1_mac.png" height="330" alt="Docker macOS"/>
-</p>
+
 
 ---
 
@@ -97,11 +84,7 @@
 
 #### 📁 极速文件管理器
 基于高安全性 SFTP 协议实现。**支持多选与批量上传**，支持手机系统快捷手势回退上级目录；内置后台传输任务中心与本地 HTTP 媒体流串流服务器，支持 4K 高清视频/无损音频免下载在线播放、PDF/图片预览本地缓存；**支持 ZIP/TAR/TGZ 等双向秒级解压缩与打包压缩**，以及**深度全局递归搜索**（基于 find 深度检索当前目录及子目录下的文件，并直观呈现物理绝对路径）。
-<p align="left">
-  <img src="screenshots/file_ios.png" height="330" alt="File Manager iOS"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/file_mac.png" height="330" alt="File Manager macOS"/>
-</p>
+
 
 ---
 
@@ -254,16 +237,7 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 
 #### 📊 Real-time Dashboard
 Beautiful interactive charts displaying CPU load, individual core temperatures, memory usage, network bandwidth, and array read/write throughput.
-<p align="left">
-  <img src="screenshots/dashboard_ios.png" height="330" alt="Dashboard iOS"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/dashboard_mac.png" height="330" alt="Dashboard macOS"/>
-</p>
-<p align="left">
-  <img src="screenshots/cpu_ios.png" height="330" alt="CPU Usage iOS"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/cpu_mac.png" height="330" alt="CPU Usage macOS"/>
-</p>
+
 
 ---
 
@@ -280,11 +254,7 @@ Beautiful interactive charts displaying CPU load, individual core temperatures, 
 
 #### 🐳 Docker & Compose Orchestration
 Start, stop, and restart Docker containers and view live stream logs. **Exclusive support for Docker Compose project deployments and YAML editor** on both mobile and desktop.
-<p align="left">
-  <img src="screenshots/docker1_ios.png" height="330" alt="Docker iOS"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/docker1_mac.png" height="330" alt="Docker macOS"/>
-</p>
+
 
 ---
 
@@ -295,11 +265,7 @@ Track disk utilization, read/write speeds, temperatures, and smart health errors
 
 #### 📁 Powerful File Manager
 Full-featured SFTP file browser. **Supports multi-selection, batch uploads**, and quick system swipe gestures to go back to the parent directory; integrated background transfer manager and local HTTP 4K streaming server, with local cache support for PDFs and image thumbnails. **Supports bidirectional ZIP/TAR compression and extraction**, and **deep recursive search** (powered by GNU find to locate files in subdirectories instantly and display full absolute paths).
-<p align="left">
-  <img src="screenshots/file_ios.png" height="330" alt="File Manager iOS"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/file_mac.png" height="330" alt="File Manager macOS"/>
-</p>
+
 
 ---
 
@@ -425,5 +391,37 @@ Your server's root access is critical. We designed Easy Unraid with a security-f
     *   **iOS**: Saved in the secure, isolated System Keychain.
     *   **macOS (Out-of-Store Version)**: To prevent annoying, repetitive system keychain authentication prompts caused by unsigned Ad-hoc developer builds, this version utilizes **App Sandbox Local Encrypted Storage**. It is strictly protected by macOS sandbox physical directory isolation (no other applications can read it). It will seamlessly transition to the System Keychain in the upcoming App Store edition.
     *   **Windows**: Encrypted and stored safely within Windows Credential Manager & Registry.
+
+---
+
+<a name="screenshots"></a>
+
+## 📸 运行截图 (Screenshots)
+
+### 📊 实时硬件仪表盘 (Dashboard)
+<p align="left">
+  <img src="screenshots/dashboard_ios.png" height="330" alt="Dashboard iOS"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/dashboard_mac.png" height="330" alt="Dashboard macOS"/>
+</p>
+<p align="left">
+  <img src="screenshots/cpu_ios.png" height="330" alt="CPU Usage iOS"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/cpu_mac.png" height="330" alt="CPU Usage macOS"/>
+</p>
+
+### 🐳 Docker 容器管理 (Docker & Compose)
+<p align="left">
+  <img src="screenshots/docker1_ios.png" height="330" alt="Docker iOS"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/docker1_mac.png" height="330" alt="Docker macOS"/>
+</p>
+
+### 📁 极速文件管理器 (File Manager)
+<p align="left">
+  <img src="screenshots/file_ios.png" height="330" alt="File Manager iOS"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/file_mac.png" height="330" alt="File Manager macOS"/>
+</p>
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
