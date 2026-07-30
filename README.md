@@ -89,18 +89,23 @@
 
 ### 🚀 快速配对指南 (Quick Start)
 
-首次运行 App 时，在系统配置页需要进行 SSH 配对。我们为您提供了两种极具弹性与安全性的连接模式：
+首次运行 App 时，在系统配置页需要完成**连接模式配置**与**安全 SSH 密钥配对**：
 
-#### 方式 A：自动模式（极简一步配对）
-1. 填入您的 Unraid API 链接及 SSH 端口。
-2. 填入您的 `root` 账户密码。
-3. App 连通后会自动生成高安全强度的 SSH 公私钥对并注入您的 Unraid 闪存中。配对完成后，**明文密码在内存中会被立即物理抹除，永久不在本地存储**。后续连接均走密钥对免密通信。
+#### 第一步：选择连接模式 (Connection Mode)
+*   **🌐 直连模式 (Direct Connection)**：推荐在【局域网内网】或【已连接 VPN（如 WireGuard, Tailscale）】的网络环境下使用。此时 API 与 SSH 通过相同 IP 地址直接通信，连接速度最快、延迟最低。
+*   **🔒 SSH 隧道穿透 (SSH Tunneling)**：推荐在【外网远程访问】且没有 VPN 时使用。您只需在路由器上映射 Unraid 的安全 SSH 端口，App 即可自动通过加密通道安全穿透 API 数据，实现 API 端口的公网零暴露。
 
-#### 方式 B：手动模式（推荐 - 100% 密码零接触）
-1. 填入您的 Unraid API 链接及 SSH 端口。
-2. 在 App 配置中生成或填入您已有的 SSH 密钥对，并复制 App 展现的 **公钥 (Public Key)**。
-3. 登录您的 Unraid Web 管理页面，打开终端，将此公钥内容追加到您的 `/boot/config/ssh/authorized_keys` 授权文件中即可。
-4. App 将不经过任何密码输入环节，直接通过您保存的私钥安全建立 SSH 会话，对您的密码安全做到 100% 零触碰。
+#### 第二步：进行安全 SSH 密钥配对 (SSH Pairing)
+无论何种模式，App 均不以任何明文形式在本地保留您的 root 密码。配对成功后即走高安全的 RSA/ED25519 强加密 SSH 密钥对进行免密连接。我们提供了两种配对方式：
+*   **方式 A：自动模式（极简一步配对）**
+    1. 输入主机地址及端口，填入您的 `root` 账户密码。
+    2. App 连通后会自动生成高强度 SSH 密钥对并自动写入服务器闪存中。
+    3. 配对成功后，**明文密码在内存中会被立即物理抹除，绝不在本地存储**。
+*   **方式 B：手动模式（推荐 - 100% 密码零接触）**
+    1. 输入主机地址及端口。
+    2. 在 App 配置中生成或导入您的 SSH 密钥对，并复制 App 展现的 **公钥 (Public Key)**。
+    3. 登录您的 Unraid Web 管理页面，打开终端，将此公钥内容追加到您的 `/boot/config/ssh/authorized_keys` 授权文件中即可。
+    4. App 将直接通过私钥建立 SSH 会话，完全无需输入任何 root 密码。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -271,18 +276,23 @@ Skeuomorphic iOS/Android home screen widgets, macOS menu bar tray utility, and c
 
 ### 🚀 Quick Start Guide
 
-During the initial setup, you will need to establish an SSH pairing. Easy Unraid provides two secure configuration modes:
+During the initial setup, you will need to configure the **Connection Mode** and establish an **SSH Pairing**:
 
-#### Mode A: Automatic Pairing
-1. Fill in your Unraid API URL and SSH port.
-2. Input your `root` password.
-3. The App will connect, generate a secure SSH keypair, and inject the public key into your Unraid flash drive automatically. Once verified, **your password is wiped from memory immediately and never saved locally**.
+#### Step 1: Choose Connection Mode
+*   **🌐 Direct Connection**: Recommended for [LAN Internal] or [VPN Connected (e.g. WireGuard, Tailscale)] networks. The API and SSH connect directly via the same IP, offering maximum performance and lowest latency.
+*   **🔒 SSH Tunneling**: Recommended for [External Remote Access] without a VPN. By simply forwarding your Unraid SSH port on the router, the App automatically tunnels API traffic over SSH, keeping your API port hidden from the public internet.
 
-#### Mode B: Manual Setup (Recommended - 100% Password-free)
-1. Fill in your Unraid API URL and SSH port.
-2. Generate an SSH keypair in the App settings and copy the **Public Key**.
-3. Log in to your Unraid WebGUI, open a terminal, and append the public key to your `/boot/config/ssh/authorized_keys` file.
-4. The App will establish secure SSH connections using the saved private key without ever prompting for or touching your root password.
+#### Step 2: Establish Secure SSH Pairing
+Regardless of the mode, the App never stores your root password in plaintext. Subsequent connections use secure RSA/ED25519 keypairs. We provide two pairing methods:
+*   **Mode A: Automatic Pairing**
+    1. Enter your host address and port, and input your `root` password.
+    2. The App connects, automatically generates an SSH keypair, and injects the public key into your Unraid flash drive.
+    3. Once verified, **your password is wiped from memory immediately and never saved locally**.
+*   **Mode B: Manual Setup (Recommended - 100% Password-free)**
+    1. Enter your host address and port.
+    2. Generate or import an SSH keypair in the App settings and copy the **Public Key**.
+    3. Log in to your Unraid WebGUI, open a terminal, and append the public key to `/boot/config/ssh/authorized_keys`.
+    4. The App will establish secure SSH connections using the saved private key without ever prompting for or touching your root password.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
