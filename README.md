@@ -55,17 +55,48 @@
 
 ### ✨ 核心功能亮点
 
-- **📊 实时硬件监测**：采用跑车发光表盘与苹果运动圆环设计重绘 CPU 与内存监测，支持顶部一键切换深色模式；多维度图表时间轴垂直对齐，跨指标走势一目了然。
-- **🐳 自托管智能相册 (PRO)**：配套自研轻量级自托管 Docker 后端容器（`easy-unraid-photos`），支持 Pinch 网格捏合缩放、大图视差滑屏及苹果级 Hero 飞入。自适应局域网直连或 SSH 安全隧道（LAN 自动探活避开隧道），120Hz 局部高刷贴手滑动，支持多服务器 Isar 数据库物理隔离与后台静默自动备份。
-- **🔒 安全隧道穿透与 WebUI 路由**：支持直连与 SSH 隧道双模连接。后台自动建立安全本地端口转发，配合内置防断连 WebView，实现零公网暴露的管理。
-- **🛡️ 密钥防护与日志安全审计**：支持一键禁用 Unraid 宿主机 SSH 密码登录（强制密钥验证，防暴力破解）；实时解析系统日志，图形化审计 WebUI 与 SSH 登录活动。
-- **🐳 Docker & Compose 编排**：一键控制容器启停/重启并阅读流式日志；支持一键更新重建容器，并引入 CPU/内存/IO 进度条与流量胶囊指示器；**独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑 (PRO)**。
-- **💾 3D 拟物化阵列前面板**：仿真复刻 NAS 物理磁盘前面板，实时监测各硬盘读写速度、工作温度、休眠（Spin Down）状态及 Errors 坏道警报。
-- **📁 极速文件管理器与分享转存**：基于 SFTP 协议，支持大文件上传/下载原地暂停与**网络断点续传**；内置 4K 媒体流播服务与本地 PDF/图片专属预览磁盘缓存；支持移动端快捷分享转存（支持 App Group 共享沙盒与路径记忆）及 **macOS 原生全局拖拽上传**。
-- **🗑️ 误删防灾回收站**：内置独立物理回收站缓冲机制，误删文件可快速一键原路还原，避免操作失误造成数据永久丢失。
-- **🚀 虚拟机控制与内置 SSH 终端**：支持虚拟机状态控制并内置 VNC 远程控制台；集成高安全性多会话 SSH 终端，取消独立 Tab 深度融入仪表盘卡片，支持长按/右键快捷菜单与剪贴板一键粘贴，优化 PIN 二次验证交互。
-- **🔋 UPS 备用电源监测**：全量适配第三方 NUT 插件（`nut-dw`），实时监控实际功耗瓦数与预计续航时间，新增 UPS 功耗历史趋势折线图，主仪表盘无感解耦加载。
-- **🎨 桌面集成与个性化定制**：提供前面板 iOS/Android 桌面小组件与 App Group 数据实时联动；适配 macOS 状态栏托盘，支持自定义顶部标题栏渐变预设及本地壁纸背景。
+- **📊 实时硬件监测**
+  - **炫酷视觉**：采用跑车发光表盘与苹果运动圆环重绘 CPU 和内存监测。
+  - **主题切换**：支持仪表盘顶部一键无感切换深浅色主题。
+  - **垂直对齐**：多维度图表时间轴垂直对齐，跨指标走势一目了然。
+- **🐳 自托管智能相册 (PRO)**
+  - **自研后端**：一键部署轻量级自托管 Docker 容器（`easy-unraid-photos`）。
+  - **流畅动效**：支持 Pinch 双指网格捏合缩放、大图视差滑屏与 Hero 飞入，高刷 120Hz 极速贴手。
+  - **智能加速**：局域网自动探活直连（LAN Bypass），外网自动回退安全加密 SSH 隧道。
+  - **安全隔离**：不同服务器的数据通过 Isar 数据库在沙盒中物理隔离。
+- **🔒 安全隧道穿透与 WebUI 路由**
+  - **零暴露**：外网远程时后台自动建立安全 SSH 本地端口转发。
+  - **防断连**：内置专属 WebView 管理页，无公网暴露，安全稳固。
+- **🛡️ 密钥防护与日志安全审计**
+  - **安全加固**：一键禁用 Unraid 宿主机 SSH 密码登录，强制密钥验证防爆破。
+  - **图形审计**：实时解析系统日志，以图形化报表审计 WebUI 与 SSH 会话活动。
+- **🐳 Docker & Compose 编排**
+  - **状态控制**：一键执行容器启动/停止/重启，提供新版本升级提示。
+  - **一键更新**：独家支持点击角标一键重建并自动拉起更新容器。
+  - **极客编排**：独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑 (PRO)。
+  - **直观监控**：集成容器 CPU/内存进度条与 Network/Disk IO 彩色流量胶囊。
+- **💾 3D 拟物化阵列前面板**
+  - **拟物机箱**：仿真复刻 NAS 物理硬盘托架前面板，绿色 LAN 网灯高频闪烁。
+  - **硬盘体检**：实时监测硬盘读写速度、工作温度、休眠状态及坏道 Errors 警告。
+  - **三态判定**：SMART 状态重构为健康/未知/异常，自动过滤无 SMART 引导/虚拟盘。
+- **📁 极速文件管理器与分享转存**
+  - **断点续传**：基于极速 SFTP，大文件上传与下载支持暂停、继续和断线后自动重连续传。
+  - **桌面拖拽**：macOS 独家支持直接向 App 窗口拖入文件/文件夹触发快速上传。
+  - **秒开缓存**：内置 4K 媒体流播，针对 PDF 与图片引入专属本地磁盘缓存，二次打开秒开。
+  - **分享转存**：iOS/Android 系统级分享扩展一键转存，智能记忆 4 条历史存储路径。
+- **🗑️ 误删防灾回收站**
+  - **防灾保护**：内置独立物理回收站缓冲机制，误删文件可快速一键原路还原。
+- **🚀 虚拟机控制与内置 SSH 终端**
+  - **VNC控制**：支持虚拟机状态一键启停并内置 VNC 远程桌面控制台。
+  - **终端卡片**：SSH 终端深度融入仪表盘快捷卡片，支持右键/长按菜单、剪贴板快捷粘贴（Cmd/Ctrl+V）。
+  - **安全交互**：优化二次 PIN 码验证，进入终端时不触发输入框聚焦，防止与指纹面容弹窗冲突。
+- **🔋 UPS 备用电源监测**
+  - **NUT适配**：全量适配第三方 NUT 插件（`nut-dw`），展示 UPS 实际功耗瓦数与预计续航。
+  - **趋势折线**：新增 UPS 功耗历史趋势折线图，主界面解耦加载。
+- **🎨 桌面集成与个性化定制**
+  - **原生组件**：支持 iOS/Android 三端原生桌面小组件，基于 App Group 共享沙盒实时数据同步。
+  - **个性定制**：支持自定义顶部标题栏渐变预设及本地壁纸背景，提供 macOS 状态栏托盘监控。
+  - **静默更新**：macOS 平台一键检测并静默自动完成解包、替换与新版自动重新拉起。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -193,17 +224,48 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 
 ### ✨ Key Features
 
-- **📊 Real-time Dashboard**: Redesigned CPU and RAM monitors to Cupertino Activity Rings and high-end Speedometers with vertically synchronized time-axes; added a quick Dark Mode toggle on top.
-- **🐳 Self-Hosted Smart Gallery (PRO)**: Seamlessly deploy custom lightweight Docker backend (`easy-unraid-photos`) with GPU hardware acceleration. Features Pinch-to-zoom, Parallax photo viewer, Apple-style Hero transitions, and smooth 120Hz scrolling. Intelligently bypasses SSH tunnel on local networks for maximum bandwidth, securing your libraries via isolated multi-server Isar databases.
-- **🔒 Secure Tunneling & WebUI Routing**: Supports Direct and SSH Tunnel modes with automated local port forwarding and in-app WebView for password-safe administration.
-- **🛡️ Key-Based Security & Logs Auditing**: Enforce key-only authentication by disabling SSH password login; features real-time parsing and graphical auditing of SSH/WebUI sessions.
-- **🐳 Docker & Compose Orchestration**: Control container states and live logs; support one-click container rebuilding/updates, CPU/MEM progress bars and IO bandwidth capsules. **Exclusively supports Docker Compose deployment and YAML syntax highlight editing (PRO)**.
-- **💾 3D Skeuomorphic Array Panel**: Simulates a real NAS hardware chassis with active drive bay LEDs. Displays real-time read/write speeds, temps, standby/sleep states, and bad sector warnings.
-- **📁 Advanced File Manager & Share Extension**: SFTP file browser with large file pause/resume and **resumable network transfers**. Features ZIP/TAR compression, 4K streaming with local PDF/image disk caches, iOS/Android native share sheets (backed by App Group sandbox and memory paths), and **macOS global drag-and-drop transfers**.
-- **🗑️ Safe Recycle Bin**: Features an in-app recycle bin buffer with one-click file recovery to safeguard data against accidental deletion.
-- **🚀 VM Power Control & SSH Terminal**: Manage VM power states with in-app VNC console support. Embedded SSH terminal into dashboard cards, adding right-click context menus, shortcut pasting, and non-blocking PIN verification.
-- **🔋 UPS Telemetry Integration**: Full support for NUT plugin (`nut-dw`), providing real-time wattage monitor, estimated battery runtime, and power history trend lines with decoupled loading.
-- **🎨 Customization & Widgets**: Skeuomorphic iOS/Android home screen widgets with real-time App Group synchronization, macOS menu bar tray utility, and customizable dashboard header backgrounds.
+- **📊 Real-time Dashboard**
+  - **Activity Rings**: Redesigned CPU and RAM monitors to Cupertino Activity Rings and high-end Speedometers.
+  - **Theme Toggle**: Switch between Light and Dark mode seamlessly at the top bar.
+  - **Synchronized Axis**: Vertically synchronized time-axes across multiple telemetry metrics.
+- **🐳 Self-Hosted Smart Gallery (PRO)**
+  - **Lightweight Backend**: One-click deployment of custom Docker backend (`easy-unraid-photos`) with GPU hardware acceleration.
+  - **Smooth Transitions**: Pinch-to-zoom timeline grids, parallax scrolling, Apple-style Hero transitions, and 120Hz smooth scrolling.
+  - **LAN Bypass**: Bypasses SSH tunnel on local networks (LAN auto-probe) to maximize transfer speeds, falling back to secure tunnel on external WAN.
+  - **Sandbox Isolation**: Secures your libraries via isolated multi-server local Isar databases.
+- **🔒 Secure Tunneling & WebUI Routing**
+  - **Port Forwarding**: Automatic local SSH tunnel forwarding for secure remote administration.
+  - **In-App WebView**: Direct secure WebUI console routing with focus-loss protection.
+- **🛡️ Key-Based Security & Logs Auditing**
+  - **SSH Hardening**: One-click disabling of Unraid SSH password logins, forcing secure key-only connections.
+  - **Security Audits**: Real-time parsing and graphical auditing of SSH/WebUI sessions.
+- **🐳 Docker & Compose Orchestration**
+  - **State Control**: Seamless container start/stop/restarts with update flags.
+  - **One-Click Updates**: Rebuild and update container binaries directly from card triggers.
+  - **Compose Editor**: Deploy Docker Compose projects with built-in YAML syntax highlight editor (PRO).
+  - **Visual Statistics**: Dedicated CPU/RAM progress bars and colored IO traffic capsules.
+- **💾 3D Skeuomorphic Array Panel**
+  - **NAS Chassis Bezel**: Simulates a physical rackmount bezel with green flickering LAN lights.
+  - **Smart Warnings**: Real-time read/write speeds, temps, standby states, and bad sector warnings.
+  - **Three-State Telemetry**: SMART diagnostics (Healthy/Unknown/Warning) while auto-omitting boot/virtual disks.
+- **📁 Advanced File Manager & Share Extension**
+  - **Resumable Transfers**: SFTP upload/downloads with pause, resume, and auto-resuming on network drop.
+  - **macOS Drag & Drop**: Native drag-and-drop file/folder transfers straight into the application window.
+  - **Instant Preview**: Built-in 4K video streaming and dedicated disk caches for instant PDF/image reopening.
+  - **Native Share Sheet**: iOS/Android system shares to Unraid with 4 recent path memories and App Group sandbox support.
+- **🗑️ Safe Recycle Bin**
+  - **Delete Protection**: In-app physical recycle bin buffer with one-click recovery.
+- **🚀 VM Power Control & SSH Terminal**
+  - **VM Management**: Control VM states with built-in in-app VNC console support.
+  - **Embedded Terminal**: Integrated SSH terminal card with right-click context menus and `Cmd+V` / `Ctrl+V` pasting.
+  - **Verification Polish**: Autofocus-free PIN screen preventing clashes with system biometric prompt.
+- **🔋 UPS Telemetry Integration**
+  - **NUT Plugin**: Full integration for NUT plugin (`nut-dw`), presenting live wattage and estimated runtime.
+  - **Power Sparklines**: Decoupled background telemetry loading with historical power trend line charts.
+- **🎨 Customization & Widgets**
+  - **Home Screen Widgets**: Native iOS/Android/macOS widgets synced via App Group sandbox.
+  - **Tray Utility**: macOS menu bar tray utility with customizable gradient and background headers.
+  - **Silent Updater**: MacOS background auto-extraction, replacing, and relaunching of binary updates.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
