@@ -55,15 +55,17 @@
 
 ### ✨ 核心功能亮点
 
-- **📊 实时硬件监测**：采用高保真网格图表展示 CPU/GPU 负载、核心温度、内存、网速及阵列流量；多维度图表时间轴垂直对齐，跨指标走势一目了然。
+- **📊 实时硬件监测**：采用跑车发光表盘与苹果运动圆环设计重绘 CPU 与内存监测，支持顶部一键切换深色模式；多维度图表时间轴垂直对齐，跨指标走势一目了然。
+- **🐳 自托管智能相册 (PRO)**：配套自研轻量级自托管 Docker 后端容器（`easy-unraid-photos`），支持 Pinch 网格捏合缩放、大图视差滑屏及苹果级 Hero 飞入。自适应局域网直连或 SSH 安全隧道（LAN 自动探活避开隧道），120Hz 局部高刷贴手滑动，支持多服务器 Isar 数据库物理隔离与后台静默自动备份。
 - **🔒 安全隧道穿透与 WebUI 路由**：支持直连与 SSH 隧道双模连接。后台自动建立安全本地端口转发，配合内置防断连 WebView，实现零公网暴露的管理。
 - **🛡️ 密钥防护与日志安全审计**：支持一键禁用 Unraid 宿主机 SSH 密码登录（强制密钥验证，防暴力破解）；实时解析系统日志，图形化审计 WebUI 与 SSH 登录活动。
-- **🐳 Docker & Compose 编排**：一键控制容器启停/重启并阅读流式日志；提供镜像升级提示；**独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑**。
+- **🐳 Docker & Compose 编排**：一键控制容器启停/重启并阅读流式日志；支持一键更新重建容器，并引入 CPU/内存/IO 进度条与流量胶囊指示器；**独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑 (PRO)**。
 - **💾 3D 拟物化阵列前面板**：仿真复刻 NAS 物理磁盘前面板，实时监测各硬盘读写速度、工作温度、休眠（Spin Down）状态及 Errors 坏道警报。
-- **📁 极速文件管理器与分享转存**：基于 SFTP 协议，支持多选、解压缩与深度全局搜索；内置 4K 媒体流播服务；支持移动端快捷分享转存及 **macOS 原生全局拖拽上传**。
+- **📁 极速文件管理器与分享转存**：基于 SFTP 协议，支持大文件上传/下载原地暂停与**网络断点续传**；内置 4K 媒体流播服务与本地 PDF/图片专属预览磁盘缓存；支持移动端快捷分享转存（支持 App Group 共享沙盒与路径记忆）及 **macOS 原生全局拖拽上传**。
 - **🗑️ 误删防灾回收站**：内置独立物理回收站缓冲机制，误删文件可快速一键原路还原，避免操作失误造成数据永久丢失。
-- **🚀 虚拟机控制与内置 SSH 终端**：支持虚拟机状态控制并内置 VNC 远程控制台；集成高安全性多会话 SSH 终端，专为移动端交互与键盘输入精调。
-- **🎨 桌面集成与个性化定制**：提供前面板 iOS/Android 桌面小组件；适配 macOS 状态栏托盘，支持自定义顶部标题栏渐变预设及本地壁纸背景。
+- **🚀 虚拟机控制与内置 SSH 终端**：支持虚拟机状态控制并内置 VNC 远程控制台；集成高安全性多会话 SSH 终端，取消独立 Tab 深度融入仪表盘卡片，支持长按/右键快捷菜单与剪贴板一键粘贴，优化 PIN 二次验证交互。
+- **🔋 UPS 备用电源监测**：全量适配第三方 NUT 插件（`nut-dw`），实时监控实际功耗瓦数与预计续航时间，新增 UPS 功耗历史趋势折线图，主仪表盘无感解耦加载。
+- **🎨 桌面集成与个性化定制**：提供前面板 iOS/Android 桌面小组件与 App Group 数据实时联动；适配 macOS 状态栏托盘，支持自定义顶部标题栏渐变预设及本地壁纸背景。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -125,6 +127,7 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 | **⚙️ 基础系统配置** (多服务器配置/自动切换) | **✅ 免费** | **✅ 免费** |
 | **🔒 SSH 隧道与安全双模连接** (直连/加密隧道) | **✅ 免费** | **✅ 免费** |
 | **🛡️ 登录安全审计** (会话日志解析与图形化统计) | **✅ 免费** | **✅ 免费** |
+| **🐳 智能相册** (自托管 Docker 后端/大图视差/Pinch缩放/备份同步) | ❌ 需激活 | **✅ 解锁** |
 | **📁 极速文件管理器** (SFTP/4K 串流/压缩包解解压/全局搜索) | ❌ 需激活 | **✅ 解锁** |
 | **🗑️ 误删回收站保护** (物理回收站防灾缓冲) | ❌ 需激活 | **✅ 解锁** |
 | **🐳 Docker 容器与 Compose 编排** (日志/YAML 高亮/部署) | ❌ 需激活 | **✅ 解锁** |
@@ -190,15 +193,17 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 
 ### ✨ Key Features
 
-- **📊 Real-time Dashboard**: Displays CPU/GPU load, core temperatures, memory, and bandwidth through high-fidelity grid charts with vertically synchronized time-axes.
+- **📊 Real-time Dashboard**: Redesigned CPU and RAM monitors to Cupertino Activity Rings and high-end Speedometers with vertically synchronized time-axes; added a quick Dark Mode toggle on top.
+- **🐳 Self-Hosted Smart Gallery (PRO)**: Seamlessly deploy custom lightweight Docker backend (`easy-unraid-photos`) with GPU hardware acceleration. Features Pinch-to-zoom, Parallax photo viewer, Apple-style Hero transitions, and smooth 120Hz scrolling. Intelligently bypasses SSH tunnel on local networks for maximum bandwidth, securing your libraries via isolated multi-server Isar databases.
 - **🔒 Secure Tunneling & WebUI Routing**: Supports Direct and SSH Tunnel modes with automated local port forwarding and in-app WebView for password-safe administration.
 - **🛡️ Key-Based Security & Logs Auditing**: Enforce key-only authentication by disabling SSH password login; features real-time parsing and graphical auditing of SSH/WebUI sessions.
-- **🐳 Docker & Compose Orchestration**: Control container states and live logs; displays update indicators and **exclusively supports Docker Compose deployment and YAML syntax highlight editing**.
+- **🐳 Docker & Compose Orchestration**: Control container states and live logs; support one-click container rebuilding/updates, CPU/MEM progress bars and IO bandwidth capsules. **Exclusively supports Docker Compose deployment and YAML syntax highlight editing (PRO)**.
 - **💾 3D Skeuomorphic Array Panel**: Simulates a real NAS hardware chassis with active drive bay LEDs. Displays real-time read/write speeds, temps, standby/sleep states, and bad sector warnings.
-- **📁 Advanced File Manager & Share Extension**: SFTP file browser with ZIP/TAR compression, recursive search, 4K media streaming, iOS/Android share sheet, and **macOS global drag-and-drop transfers**.
+- **📁 Advanced File Manager & Share Extension**: SFTP file browser with large file pause/resume and **resumable network transfers**. Features ZIP/TAR compression, 4K streaming with local PDF/image disk caches, iOS/Android native share sheets (backed by App Group sandbox and memory paths), and **macOS global drag-and-drop transfers**.
 - **🗑️ Safe Recycle Bin**: Features an in-app recycle bin buffer with one-click file recovery to safeguard data against accidental deletion.
-- **🚀 VM Power Control & SSH Terminal**: Manage VM power states with in-app VNC console support. Features a multi-session secure SSH terminal optimized for mobile gestures.
-- **🎨 Customization & Widgets**: Skeuomorphic iOS/Android home screen widgets, macOS menu bar tray utility, and customizable dashboard header backgrounds.
+- **🚀 VM Power Control & SSH Terminal**: Manage VM power states with in-app VNC console support. Embedded SSH terminal into dashboard cards, adding right-click context menus, shortcut pasting, and non-blocking PIN verification.
+- **🔋 UPS Telemetry Integration**: Full support for NUT plugin (`nut-dw`), providing real-time wattage monitor, estimated battery runtime, and power history trend lines with decoupled loading.
+- **🎨 Customization & Widgets**: Skeuomorphic iOS/Android home screen widgets with real-time App Group synchronization, macOS menu bar tray utility, and customizable dashboard header backgrounds.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -260,6 +265,7 @@ Easy Unraid adopts a sustainable model: "Essential monitoring features are perma
 | **⚙️ Server Configurations** (Multi-server configuration & switching) | **✅ Free** | **✅ Free** |
 | **🔒 SSH Tunneling** (Direct and secure local port forwarding) | **✅ Free** | **✅ Free** |
 | **🛡️ Security Audit Logs** (Login session auditing and metrics) | **✅ Free** | **✅ Free** |
+| **🐳 Smart Gallery** (Self-hosted Docker backend, pinch zoom, parallax scroll, backup sync) | ❌ Pro Only | **✅ Unlocked** |
 | **📁 File Manager** (SFTP / 4K streaming / ZIP & TAR / Deep search) | ❌ Pro Only | **✅ Unlocked** |
 | **🗑️ Safe Recycle Bin** (App-level delete protection) | ❌ Pro Only | **✅ Unlocked** |
 | **🐳 Docker & Compose** (Logs/YAML editor/deployments) | ❌ Pro Only | **✅ Unlocked** |
@@ -319,28 +325,30 @@ Join our official Telegram community to chat with users and test preview builds:
 
 ### 📊 实时硬件仪表盘 (Dashboard)
 <p align="left">
-  <img src="screenshots/dashboard_ios.png" height="330" alt="Dashboard iOS"/>
+  <img src="screenshots/Screenshot_2026-08-05-07-42-24-644_com.wlaosj.easy_unraid-edit.png" height="330" alt="Dashboard Overview"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/dashboard_mac.png" height="330" alt="Dashboard macOS"/>
-</p>
-<p align="left">
-  <img src="screenshots/cpu_ios.png" height="330" alt="CPU Usage iOS"/>
+  <img src="screenshots/Screenshot_2026-08-05-07-43-05-365_com.wlaosj.easy_unraid-edit.png" height="330" alt="Storage Details"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/cpu_mac.png" height="330" alt="CPU Usage macOS"/>
+  <img src="screenshots/Screenshot_2026-08-05-07-43-39-158_com.wlaosj.easy_unraid-edit.png" height="330" alt="System Logs"/>
 </p>
 
 ### 🐳 Docker 容器管理 (Docker & Compose)
 <p align="left">
-  <img src="screenshots/docker1_ios.png" height="330" alt="Docker iOS"/>
+  <img src="screenshots/Screenshot_2026-08-05-07-43-21-014_com.wlaosj.easy_unraid-edit.png" height="330" alt="Docker Containers 1"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/docker1_mac.png" height="330" alt="Docker macOS"/>
+  <img src="screenshots/Screenshot_2026-08-05-07-43-28-830_com.wlaosj.easy_unraid-edit.png" height="330" alt="Docker Containers 2"/>
 </p>
 
 ### 📁 极速文件管理器 (File Manager)
 <p align="left">
-  <img src="screenshots/file_ios.png" height="330" alt="File Manager iOS"/>
+  <img src="screenshots/Screenshot_2026-08-05-07-44-09-345_com.wlaosj.easy_unraid-edit.png" height="330" alt="File Browser"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/file_mac.png" height="330" alt="File Manager macOS"/>
+  <img src="screenshots/Screenshot_2026-08-05-07-44-15-608_com.wlaosj.easy_unraid-edit.png" height="330" alt="Sidebar Navigation"/>
+</p>
+
+### 🐳 智能相册 (Smart Gallery)
+<p align="left">
+  <img src="screenshots/Screenshot_2026-08-05-07-45-33-076_com.wlaosj.easy_unraid-edit.png" height="330" alt="Smart Gallery Timeline"/>
 </p>
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
