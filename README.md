@@ -18,6 +18,10 @@
   <img src="https://img.shields.io/badge/OS-Android%20%7C%20macOS%20%7C%20Windows%20%7C%20iOS%20%7C%20Harmony-blueviolet?style=flat-square" alt="OS Support"/>
 </p>
 
+<p align="center">
+  <img src="screenshots/feature_graphic.png" alt="Easy Unraid Features" width="800" style="border-radius: 16px;"/>
+</p>
+
 ---
 
 ## 📌 目录 (Table of Contents)
