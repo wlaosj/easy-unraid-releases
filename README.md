@@ -53,53 +53,58 @@
 
 ## 🇨🇳 中文介绍
 
-**Easy Unraid** 是一款基于 Flutter 构建的高性能、跨平台 Unraid 服务器管理客户端。突破传统浏览器访问限制，为移动设备与桌面端提供流畅、原生的硬件监控、容器管理与文件传输体验。
+**Easy Unraid** 是一款基于 Flutter 构建的高性能、跨平台 Unraid 服务器管理客户端。突破传统浏览器访问限制，为移动设备与桌面端提供流畅、原生的硬件监控、应用商店检索、Docker 编排、插件一键升级、自托管 AI 智能相册与极速文件传输体验。
 
 <a name="features-zh"></a>
 
 ### ✨ 核心功能亮点
 
-- **📊 实时硬件监测**
-  - **炫酷视觉**：采用跑车发光表盘与苹果运动圆环重绘 CPU 和内存监测。
+- **📊 实时硬件监测与官方设计语言**
+  - **官方矢量图标**：全量集成 Unraid 官方原生矢量图标体系，品牌爱马仕红橙（`#FF5D22`）点睛。
+  - **优雅仪表盘**：采用苹果运动圆环与跑车高精仪表盘重绘 CPU、内存与硬件指标。
+  - **错层防重叠**：指标卡片硬件 Logo 与高频折线波形错层隔离，排版清爽现代。
   - **主题切换**：支持仪表盘顶部一键无感切换深浅色主题。
-  - **垂直对齐**：多维度图表时间轴垂直对齐，跨指标走势一目了然。
-- **🐳 自托管智能相册 (PRO)**
-  - **自研后端**：一键部署轻量级自托管 Docker 容器（`easy-unraid-photos`）。
+- **🛒 Community Applications 官方社区应用商店 (PRO)**
+  - **海量应用**：完整接入 Unraid 官方百万级社区应用商店，秒级检索与智能分类浏览。
+  - **模版引擎**：深度解析原生 XML 容器模版，自动装配网络、端口映射、路径卷与环境变量。
+- **🔌 插件全量检测与一键批量升级**
+  - **静默检测**：后台静默检测 Unraid 已安装插件更新，多服务器沙盒物理隔离缓存。
+  - **一键更新全部**：多插件可升级时动态浮现「全部更新 (Update All)」排队串行升级，避免安装锁死并提供实时合并日志流。
+  - **版本对比与卸载**：支持多版本 Markdown 历史更新日志对比与一键安全卸载。
+- **🧠 自托管 AI 智能相册 (PRO)**
+  - **自研后端**：一键部署轻量级自托管 Docker 容器（`easy-unraid-photos`），支持 GPU 硬件加速。
+  - **离线语义搜图**：纯本地运行多模态 CLIP 智能搜索引擎，中英文输入精准检索照片场景。
+  - **离线人脸聚类**：纯本地人脸识别聚类算法，支持空闲内存超时自动回收，零云端隐私泄露。
+  - **视频预览时长可配**：支持自由配置动态视频预览时长（关闭 / 3秒 / 5秒 / 10秒 / 15秒），关闭后 0 转码开销秒开原画。
   - **流畅动效**：支持 Pinch 双指网格捏合缩放、大图视差滑屏与 Hero 飞入，高刷 120Hz 极速贴手。
-  - **智能加速**：局域网自动探活直连（LAN Bypass），外网自动回退安全加密 SSH 隧道。
-  - **安全隔离**：不同服务器的数据通过 Isar 数据库在沙盒中物理隔离。
-- **🔒 安全隧道穿透与 WebUI 路由**
-  - **零暴露**：外网远程时后台自动建立安全 SSH 本地端口转发。
-  - **防断连**：内置专属 WebView 管理页，无公网暴露，安全稳固。
-- **🛡️ 密钥防护与日志安全审计**
-  - **安全加固**：一键禁用 Unraid 宿主机 SSH 密码登录，强制密钥验证防爆破。
-  - **图形审计**：实时解析系统日志，以图形化报表审计 WebUI 与 SSH 会话活动。
-- **🐳 Docker & Compose 编排**
-  - **状态控制**：一键执行容器启动/停止/重启，提供新版本升级提示。
+  - **智能直连加速**：局域网自动探活直连（LAN Bypass），外网自动回退安全加密 SSH 隧道。
+- **🐳 Docker 容器与 Compose 编排 (PRO)**
+  - **独立分立式控制栏**：移动端全新设计为纯净搜索框 + 商店高亮入口 + 快捷添加 + 更多菜单。
+  - **来源元数据副标题**：智能识别原生模版、CA 商店、Compose 堆栈，卡片视图智能去重端口。
   - **一键更新**：独家支持点击角标一键重建并自动拉起更新容器。
-  - **极客编排**：独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑 (PRO)。
-  - **直观监控**：集成容器 CPU/内存进度条与 Network/Disk IO 彩色流量胶囊。
-- **💾 3D 拟物化阵列前面板**
-  - **拟物机箱**：仿真复刻 NAS 物理硬盘托架前面板，绿色 LAN 网灯高频闪烁。
+  - **极客编排**：独家支持 Docker Compose 项目一键部署与 YAML 语法高亮编辑。
+  - **直观监控**：集成容器 CPU/内存实时进度条与 Network/Disk IO 彩色流量胶囊。
+- **💾 阳极氧化铝 3D 拟物化阵列面板**
+  - **工业质感机箱**：阳极氧化冷银铝合金机箱前面板，绿光 LAN 指示灯高频闪烁。
   - **硬盘体检**：实时监测硬盘读写速度、工作温度、休眠状态及坏道 Errors 警告。
   - **三态判定**：SMART 状态重构为健康/未知/异常，自动过滤无 SMART 引导/虚拟盘。
-- **📁 极速文件管理器与分享转存**
+- **📁 极速文件管理器与分享转存 (PRO)**
   - **断点续传**：基于极速 SFTP，大文件上传与下载支持暂停、继续和断线后自动重连续传。
   - **桌面拖拽**：macOS 独家支持直接向 App 窗口拖入文件/文件夹触发快速上传。
   - **秒开缓存**：内置 4K 媒体流播，针对 PDF 与图片引入专属本地磁盘缓存，二次打开秒开。
   - **分享转存**：iOS/Android 系统级分享扩展一键转存，智能记忆 4 条历史存储路径。
-- **🗑️ 误删防灾回收站**
-  - **防灾保护**：内置独立物理回收站缓冲机制，误删文件可快速一键原路还原。
-- **🚀 虚拟机控制与内置 SSH 终端**
+  - **防灾回收站**：内置独立物理回收站缓冲机制，误删文件可快速一键原路还原。
+- **🚀 虚拟机控制与内置 SSH 终端 (PRO)**
   - **VNC控制**：支持虚拟机状态一键启停并内置 VNC 远程桌面控制台。
-  - **终端卡片**：SSH 终端深度融入仪表盘快捷卡片，支持右键/长按菜单、剪贴板快捷粘贴（Cmd/Ctrl+V）。
+  - **终端卡片**：SSH 终端深度融入仪表盘快捷卡片，支持右键/长按菜单、剪贴板快捷粘贴（`Cmd/Ctrl+V`）。
   - **安全交互**：优化二次 PIN 码验证，进入终端时不触发输入框聚焦，防止与指纹面容弹窗冲突。
 - **🔋 UPS 备用电源监测**
   - **NUT适配**：全量适配第三方 NUT 插件（`nut-dw`），展示 UPS 实际功耗瓦数与预计续航。
-  - **趋势折线**：新增 UPS 功耗历史趋势折线图，主界面解耦加载。
-- **🎨 桌面集成与个性化定制**
-  - **原生组件**：支持 iOS/Android 三端原生桌面小组件，基于 App Group 共享沙盒实时数据同步。
-  - **个性定制**：支持自定义顶部标题栏渐变预设及本地壁纸背景，提供 macOS 状态栏托盘监控。
+  - **趋势折线**：新增 UPS 功耗历史趋势折线图，主界面解耦后台加载。
+- **🎨 大屏黄金自适应与桌面集成**
+  - **黄金自适应规范**：设置中心、新增容器与首次登录引导页在大屏下统一收敛为 `maxWidth: 820` 居中布局，彻底消除超宽屏过度拉伸。
+  - **全量矢量去噪**：全面去除彩色 Emoji，统一为纯净、支持主题高亮的 `LucideIcons` 线性矢量图标。
+  - **原生小组件**：支持 iOS/Android/macOS 三端原生桌面小组件，基于 App Group 共享沙盒实时数据同步。
   - **静默更新**：macOS 平台一键检测并静默自动完成解包、替换与新版自动重新拉起。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
@@ -113,16 +118,16 @@
 首次运行 App 时，在系统配置页需要完成**连接模式配置**与**安全 SSH 密钥配对**：
 
 #### 第一步：选择连接模式 (Connection Mode)
-- **🌐 直连模式 (Direct Connection)**：推荐在【局域网内网】或【已连接 VPN（WireGuard, Tailscale, ZeroTier）】时使用，延迟最低、速度最快。
-- **🔒 SSH 隧道穿透 (SSH Tunneling)**：推荐在【外网远程访问】且未开启 VPN 时使用。只需在路由器映射 SSH 端口，App 即可自动通过加密通道穿透 API 数据，实现 API 端口零暴露。
+- **直连模式 (Direct Connection)**：推荐在【局域网内网】或【已连接 VPN（WireGuard, Tailscale, ZeroTier）】时使用，延迟最低、速度最快。
+- **SSH 隧道穿透 (SSH Tunneling)**：推荐在【外网远程访问】且未开启 VPN 时使用。只需在路由器映射 SSH 端口，App 即可自动通过加密通道穿透 API 数据，实现 API 端口零暴露。
 
 #### 第二步：进行安全 SSH 密钥配对 (SSH Pairing)
 App 不在本地存储明文 root 密码。配对成功后统一走 RSA/ED25519 强加密 SSH 密钥对进行免密连接：
-- **方式 A：自动模式（极简一步配对）**
-  1. 输入主机地址、端口及 `root` 账户密码。
+- **方式 A：自动免密注入（极简一步配对）**
+  1. 输入服务器 IP 地址、端口及 `root` 账户密码。
   2. App 连通后自动生成 SSH 密钥对并写入服务器闪存，配对成功后**明文密码在内存中被物理抹除**。
-- **方式 B：手动模式（推荐 - 100% 密码零接触）**
-  1. 输入主机地址及端口。
+- **方式 B：极客手动注入（推荐 - 100% 密码零接触）**
+  1. 输入服务器 IP 地址及端口。
   2. 在 App 配置中生成或导入 SSH 密钥对，复制显示出的 **公钥 (Public Key)**。
   3. 登录 Unraid Web 管理页打开终端，将公钥内容追加到 `/boot/config/ssh/authorized_keys` 即可免密连接。
 
@@ -157,15 +162,18 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 
 | 功能模块 | 免费版 (Free) | 专业版 (Pro) |
 | :--- | :---: | :---: |
-| **📊 实时硬件仪表盘** (CPU/内存/网速看板) | **✅ 免费** | **✅ 免费** |
-| **💾 存储阵列监控** (磁盘空间/温度/坏道警告) | **✅ 免费** | **✅ 免费** |
-| **⚙️ 基础系统配置** (多服务器配置/自动切换) | **✅ 免费** | **✅ 免费** |
+| **📊 实时硬件仪表盘** (CPU/内存/网速看板/官方矢量图标) | **✅ 免费** | **✅ 免费** |
+| **💾 存储阵列监控** (磁盘空间/温度/坏道警告/3D拟物机箱) | **✅ 免费** | **✅ 免费** |
+| **🔌 插件管理与检测** (插件更新检测/日志查看/单插件升级) | **✅ 免费** | **✅ 免费** |
+| **⚙️ 基础系统配置** (多服务器配置/自动切换/820黄金自适应) | **✅ 免费** | **✅ 免费** |
 | **🔒 SSH 隧道与安全双模连接** (直连/加密隧道) | **✅ 免费** | **✅ 免费** |
 | **🛡️ 登录安全审计** (会话日志解析与图形化统计) | **✅ 免费** | **✅ 免费** |
-| **🐳 智能相册** (自托管 Docker 后端/大图视差/Pinch缩放/备份同步) | ❌ 需激活 | **✅ 解锁** |
-| **📁 极速文件管理器** (SFTP/4K 串流/压缩包解解压/全局搜索) | ❌ 需激活 | **✅ 解锁** |
+| **🛒 Community Applications 应用市场** (CA 应用商店/XML 模版一键装配) | ❌ 需激活 | **✅ 解锁** |
+| **📦 插件一键「全部更新」** (排队串行批量升级与日志合并) | ❌ 需激活 | **✅ 解锁** |
+| **🧠 自托管 AI 智能相册** (离线 CLIP 搜图/人脸聚类/大图视差/预览时长可配) | ❌ 需激活 | **✅ 解锁** |
+| **📁 极速文件管理器** (SFTP/4K 串流/压缩包解解压/拖拽上传/全局搜索) | ❌ 需激活 | **✅ 解锁** |
 | **🗑️ 误删回收站保护** (物理回收站防灾缓冲) | ❌ 需激活 | **✅ 解锁** |
-| **🐳 Docker 容器与 Compose 编排** (日志/YAML 高亮/部署) | ❌ 需激活 | **✅ 解锁** |
+| **🐳 Docker 容器与 Compose 编排** (日志/一键更新/YAML 高亮/部署) | ❌ 需激活 | **✅ 解锁** |
 | **🚀 虚拟机控制与 SSH 终端** (VM 控制/全功能终端/禁用密码登录) | ❌ 需激活 | **✅ 解锁** |
 
 > [!TIP]
@@ -222,53 +230,58 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 
 ## 🇺🇸 English
 
-**Easy Unraid** is a sleek, modern, and powerful cross-platform manager for Unraid servers, built with Flutter. It breaks free from traditional browser limitations to provide you with a fluid, native experience on mobile devices and desktops.
+**Easy Unraid** is a sleek, modern, and powerful cross-platform manager for Unraid servers, built with Flutter. It breaks free from traditional browser limitations to provide you with a fluid, native experience for hardware telemetry, Community Applications, Docker & Compose management, plugin batch upgrades, self-hosted AI smart gallery, and high-speed SFTP file transfers.
 
 <a name="features-en"></a>
 
 ### ✨ Key Features
 
-- **📊 Real-time Dashboard**
-  - **Activity Rings**: Redesigned CPU and RAM monitors to Cupertino Activity Rings and high-end Speedometers.
+- **📊 Real-time Telemetry with Official Unraid Design**
+  - **Official Vector Icons**: Fully integrated with the official Unraid vector icon library and signature Hermes Orange (`#FF5D22`) accents.
+  - **Activity Rings & Speedometers**: Cupertino-style activity rings and precision speedometers for CPU, RAM, and hardware telemetry.
+  - **Separated Layering**: Shifted hardware logos and mini charts onto separate vertical layers to completely prevent chart-logo overlap.
   - **Theme Toggle**: Switch between Light and Dark mode seamlessly at the top bar.
-  - **Synchronized Axis**: Vertically synchronized time-axes across multiple telemetry metrics.
-- **🐳 Self-Hosted Smart Gallery (PRO)**
+- **🛒 Community Applications (CA) Store & Template Engine (PRO)**
+  - **Vast Ecosystem**: Direct access to thousands of Unraid community applications with instant search and category filtering.
+  - **XML Template Engine**: Seamless parsing of native XML container templates, automatically wiring network modes, port mappings, volume mounts, and environment variables.
+- **🔌 Plugin Management & Batch Upgrades**
+  - **Silent Background Detection**: Scans for installed Unraid plugin updates in the background with host-isolated caching.
+  - **Batch "Update All" (PRO)**: Sequenced queue upgrades when multiple plugins have updates, featuring merged terminal output streams and safety locks.
+  - **Changelog Comparison & Uninstallation**: Detailed multi-version Markdown changelog comparisons and safe one-click plugin uninstallation.
+- **🧠 Self-Hosted Smart Gallery with Offline AI (PRO)**
   - **Lightweight Backend**: One-click deployment of custom Docker backend (`easy-unraid-photos`) with GPU hardware acceleration.
+  - **Offline Semantic Search**: Integrated multi-modal CLIP AI engine for natural language scene and object searches completely on-device.
+  - **Offline Face Clustering**: On-device facial recognition clustering with automatic memory timeout reclamation—100% private.
+  - **Configurable Video Previews**: Customizable dynamic preview duration (Off / 3s / 5s / 10s / 15s) to eliminate transcoding overhead and stream raw original video instantly.
   - **Smooth Transitions**: Pinch-to-zoom timeline grids, parallax scrolling, Apple-style Hero transitions, and 120Hz smooth scrolling.
   - **LAN Bypass**: Bypasses SSH tunnel on local networks (LAN auto-probe) to maximize transfer speeds, falling back to secure tunnel on external WAN.
-  - **Sandbox Isolation**: Secures your libraries via isolated multi-server local Isar databases.
-- **🔒 Secure Tunneling & WebUI Routing**
-  - **Port Forwarding**: Automatic local SSH tunnel forwarding for secure remote administration.
-  - **In-App WebView**: Direct secure WebUI console routing with focus-loss protection.
-- **🛡️ Key-Based Security & Logs Auditing**
-  - **SSH Hardening**: One-click disabling of Unraid SSH password logins, forcing secure key-only connections.
-  - **Security Audits**: Real-time parsing and graphical auditing of SSH/WebUI sessions.
-- **🐳 Docker & Compose Orchestration**
-  - **State Control**: Seamless container start/stop/restarts with update flags.
-  - **One-Click Updates**: Rebuild and update container binaries directly from card triggers.
-  - **Compose Editor**: Deploy Docker Compose projects with built-in YAML syntax highlight editor (PRO).
+- **🐳 Docker & Compose Orchestration (PRO)**
+  - **Separated Mobile Control Bar**: Clean independent search bar, CA store highlighted button, container creation, and more actions.
+  - **Subtitle Metadata Identification**: Automatically classifies templates (Native / CA Store / Compose Stack) and eliminates duplicate port rendering.
+  - **One-Click Updates**: Rebuild and update container binaries directly from card badges.
+  - **Compose Editor**: Deploy Docker Compose projects with built-in YAML syntax highlight editor.
   - **Visual Statistics**: Dedicated CPU/RAM progress bars and colored IO traffic capsules.
-- **💾 3D Skeuomorphic Array Panel**
-  - **NAS Chassis Bezel**: Simulates a physical rackmount bezel with green flickering LAN lights.
+- **💾 Anodized Aluminum 3D Array Panel**
+  - **Skeuomorphic NAS Bezel**: Simulates a physical cold-silver aluminum rackmount bezel with green flickering LAN lights.
   - **Smart Warnings**: Real-time read/write speeds, temps, standby states, and bad sector warnings.
   - **Three-State Telemetry**: SMART diagnostics (Healthy/Unknown/Warning) while auto-omitting boot/virtual disks.
-- **📁 Advanced File Manager & Share Extension**
+- **📁 Advanced File Manager & Share Extension (PRO)**
   - **Resumable Transfers**: SFTP upload/downloads with pause, resume, and auto-resuming on network drop.
   - **macOS Drag & Drop**: Native drag-and-drop file/folder transfers straight into the application window.
   - **Instant Preview**: Built-in 4K video streaming and dedicated disk caches for instant PDF/image reopening.
   - **Native Share Sheet**: iOS/Android system shares to Unraid with 4 recent path memories and App Group sandbox support.
-- **🗑️ Safe Recycle Bin**
   - **Delete Protection**: In-app physical recycle bin buffer with one-click recovery.
-- **🚀 VM Power Control & SSH Terminal**
+- **🚀 VM Power Control & SSH Terminal (PRO)**
   - **VM Management**: Control VM states with built-in in-app VNC console support.
   - **Embedded Terminal**: Integrated SSH terminal card with right-click context menus and `Cmd+V` / `Ctrl+V` pasting.
   - **Verification Polish**: Autofocus-free PIN screen preventing clashes with system biometric prompt.
 - **🔋 UPS Telemetry Integration**
   - **NUT Plugin**: Full integration for NUT plugin (`nut-dw`), presenting live wattage and estimated runtime.
   - **Power Sparklines**: Decoupled background telemetry loading with historical power trend line charts.
-- **🎨 Customization & Widgets**
+- **🎨 Standardized Layouts & Desktop Integration**
+  - **maxWidth: 820 Constraint**: Settings, container installation, and onboarding welcome flows unified under a 820px centered layout to eliminate excessive widescreen stretching.
+  - **Full Vectorization**: Clean Lucide linear vector icons replacing colored emojis across connection toggles and security guides.
   - **Home Screen Widgets**: Native iOS/Android/macOS widgets synced via App Group sandbox.
-  - **Tray Utility**: macOS menu bar tray utility with customizable gradient and background headers.
   - **Silent Updater**: MacOS background auto-extraction, replacing, and relaunching of binary updates.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
@@ -282,16 +295,16 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 During initial setup, configure the **Connection Mode** and establish an **SSH Pairing**:
 
 #### Step 1: Choose Connection Mode
-- **🌐 Direct Connection**: Recommended for [LAN Internal] or [VPN Connected (WireGuard, Tailscale, ZeroTier)] networks for lowest latency and best performance.
-- **🔒 SSH Tunneling**: Recommended for [External Remote Access] without a VPN. By forwarding your Unraid SSH port on the router, the App automatically tunnels API traffic over SSH, keeping API ports hidden.
+- **Direct Connection**: Recommended for [LAN Internal] or [VPN Connected (WireGuard, Tailscale, ZeroTier)] networks for lowest latency and best performance.
+- **SSH Tunneling**: Recommended for [External Remote Access] without a VPN. By forwarding your Unraid SSH port on the router, the App automatically tunnels API traffic over SSH, keeping API ports hidden.
 
 #### Step 2: Establish Secure SSH Pairing
 The App never stores your root password in plaintext. Subsequent connections use secure RSA/ED25519 keypairs:
 - **Mode A: Automatic Pairing**
-  1. Enter host address, port, and `root` password.
+  1. Enter server IP/domain, port, and `root` password.
   2. The App connects, generates an SSH keypair, and injects the public key into your Unraid flash drive. Password is **wiped from memory immediately**.
 - **Mode B: Manual Setup (Recommended - 100% Password-free)**
-  1. Enter host address and port.
+  1. Enter server IP/domain and port.
   2. Generate or import an SSH keypair in App settings and copy the **Public Key**.
   3. Log in to Unraid WebGUI, open terminal, and append the public key to `/boot/config/ssh/authorized_keys`.
 
@@ -326,15 +339,18 @@ Easy Unraid adopts a sustainable model: "Essential monitoring features are perma
 
 | Feature | Free Edition | Pro Edition |
 | :--- | :---: | :---: |
-| **📊 Real-time Dashboard** (CPU/RAM/Network real-time stats) | **✅ Free** | **✅ Free** |
-| **💾 Array Monitor** (Disk utilization/temperatures/smart errors) | **✅ Free** | **✅ Free** |
-| **⚙️ Server Configurations** (Multi-server configuration & switching) | **✅ Free** | **✅ Free** |
+| **📊 Real-time Dashboard** (CPU/RAM/Network real-time stats & vector icons) | **✅ Free** | **✅ Free** |
+| **💾 Array Monitor** (Disk utilization/temperatures/smart errors/3D Bezel) | **✅ Free** | **✅ Free** |
+| **🔌 Plugin Manager** (Update checking/changelog view/single upgrade) | **✅ Free** | **✅ Free** |
+| **⚙️ Server Configurations** (Multi-server switching & 820px layout) | **✅ Free** | **✅ Free** |
 | **🔒 SSH Tunneling** (Direct and secure local port forwarding) | **✅ Free** | **✅ Free** |
 | **🛡️ Security Audit Logs** (Login session auditing and metrics) | **✅ Free** | **✅ Free** |
-| **🐳 Smart Gallery** (Self-hosted Docker backend, pinch zoom, parallax scroll, backup sync) | ❌ Pro Only | **✅ Unlocked** |
-| **📁 File Manager** (SFTP / 4K streaming / ZIP & TAR / Deep search) | ❌ Pro Only | **✅ Unlocked** |
+| **🛒 Community Applications Store** (CA App Store & XML Template parser) | ❌ Pro Only | **✅ Unlocked** |
+| **📦 Plugin "Update All" Batch Upgrade** (Queued background batch upgrades) | ❌ Pro Only | **✅ Unlocked** |
+| **🧠 Smart Gallery** (Offline CLIP search, face clustering, preview config, LAN bypass) | ❌ Pro Only | **✅ Unlocked** |
+| **📁 File Manager** (SFTP / 4K streaming / ZIP & TAR / Drag & Drop / Deep search) | ❌ Pro Only | **✅ Unlocked** |
 | **🗑️ Safe Recycle Bin** (App-level delete protection) | ❌ Pro Only | **✅ Unlocked** |
-| **🐳 Docker & Compose** (Logs/YAML editor/deployments) | ❌ Pro Only | **✅ Unlocked** |
+| **🐳 Docker & Compose** (Logs/one-click updates/YAML editor/deployments) | ❌ Pro Only | **✅ Unlocked** |
 | **🚀 VM & SSH Console** (Virtual machines/SSH terminal/Disable password auth) | ❌ Pro Only | **✅ Unlocked** |
 
 > [!TIP]
