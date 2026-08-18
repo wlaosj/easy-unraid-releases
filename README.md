@@ -98,6 +98,9 @@
   - **VNC控制**：支持虚拟机状态一键启停并内置 VNC 远程桌面控制台。
   - **终端卡片**：SSH 终端深度融入仪表盘快捷卡片，支持右键/长按菜单、剪贴板快捷粘贴（`Cmd/Ctrl+V`）。
   - **安全交互**：优化二次 PIN 码验证，进入终端时不触发输入框聚焦，防止与指纹面容弹窗冲突。
+- **🔒 一键防爆破加固 (禁用 SSH 密码登录)**
+  - **极客安全加固**：密钥配对成功后一键关闭 Unraid 的 SSH 密码登录通道，100% 免疫公网扫描与自动化暴力破解。
+  - **断电持久生效**：配置安全固化至引导 U 盘（`/boot/config/ssh/sshd_config`），宿主机断电重启后永久生效。
 - **🔋 UPS 备用电源监测**
   - **NUT适配**：全量适配第三方 NUT 插件（`nut-dw`），展示 UPS 实际功耗瓦数与预计续航。
   - **趋势折线**：新增 UPS 功耗历史趋势折线图，主界面解耦后台加载。
@@ -143,6 +146,10 @@ App 不在本地存储明文 root 密码。配对成功后统一走 RSA/ED25519 
 
 > [!WARNING]
 > **风险提示**：Easy Unraid 需要同时与 Unraid API（HTTP/HTTPS 端口）及 SSH 控制台（22 端口）建立连接。直接将管理端口映射到公网极易遭受暴力破解和扫描攻击。
+
+> [!IMPORTANT]
+> **公网 SSH 隧道安全黄金法则**：  
+> 若您在外网环境下选择【SSH 隧道穿透】并在路由器上暴露了 SSH 端口，**在 App 首次配对成功后，请务必前往「设置 ➔ 安全」中开启「禁用 SSH 密码登录 (防爆破)」**。开启后 Unraid 将关闭密码与交互式认证，仅允许持有本设备私钥的客户端连接，彻底斩断公网黑客的自动化字典撞库与暴力破解通道。
 
 > [!TIP]
 > **VPN 隧道优势**：
@@ -221,6 +228,13 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
   - **iOS**：使用系统级安全钥匙串（Keychain）进行沙盒加密隔离存储。
   - **macOS (独立分发版)**：采用 App 独立隔离沙盒（SharedPreferences Sandbox）加密存储，防跨目录访问；未来商店版将支持 Keychain。
   - **Windows**：使用 Windows Credential & Registry 隔离沙盒物理存储。
+- **🔒 一键防爆破加固与持久化机制 (100% 免疫公网暴力破解)**：
+  - **加固原理**：在客户端成功建立私钥免密配对后，可直接在「设置 ➔ 安全」中一键开启「禁用 SSH 密码登录」。App 会自动更新 `/boot/config/ssh/sshd_config` 与 `/etc/ssh/sshd_config`，将密码验证及交互式认证彻底关闭（`PasswordAuthentication no`、`ChallengeResponseAuthentication no`、`KbdInteractiveAuthentication no`）并热重载 SSHD。
+  - **开机与断电持久化**：由于配置写入了 Unraid 引导 U 盘闪存（`/boot/config/ssh/`），宿主机在经历系统更新、断电重启后，防爆破安全策略依然永久生效。
+  - **极客应急还原指令**：若因换机或客户端设备丢失导致无法密钥登录，用户可随时登录 Unraid Web 终端（WebUI Terminal）执行单行指令秒级还原默认密码登录：
+    ```bash
+    sed -i 's/^PasswordAuthentication.*/PasswordAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config && /etc/rc.d/rc.sshd restart
+    ```
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -275,6 +289,9 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
   - **VM Management**: Control VM states with built-in in-app VNC console support.
   - **Embedded Terminal**: Integrated SSH terminal card with right-click context menus and `Cmd+V` / `Ctrl+V` pasting.
   - **Verification Polish**: Autofocus-free PIN screen preventing clashes with system biometric prompt.
+- **🔒 One-Click Anti-Brute-Force Hardening**
+  - **Geek Hardening**: Completely disable Unraid SSH password authentication with one tap after key pairing, ensuring 100% immunity against automated brute-force attacks.
+  - **Persistent Across Reboots**: Security policies are permanently saved to your Unraid boot flash drive (`/boot/config/ssh/sshd_config`).
 - **🔋 UPS Telemetry Integration**
   - **NUT Plugin**: Full integration for NUT plugin (`nut-dw`), presenting live wattage and estimated runtime.
   - **Power Sparklines**: Decoupled background telemetry loading with historical power trend line charts.
@@ -320,6 +337,10 @@ To guarantee server safety, we **highly recommend using a VPN tunnel (such as Wi
 
 > [!WARNING]
 > **Security Notice**: Directly exposing core management ports (API and SSH port 22) to the public internet makes your server vulnerable to automated scanners and brute-force attacks.
+
+> [!IMPORTANT]
+> **Golden Rule for WAN SSH Tunneling**:  
+> If you expose the SSH port to the public internet for 【SSH Tunneling】, **you MUST navigate to "Settings ➔ Security" and enable "Disable SSH Password Authentication (Anti-Brute-Force)" immediately after initial pairing**. Once enabled, Unraid rejects all password and keyboard-interactive authentication attempts, ensuring 100% immunity against automated dictionary and brute-force attacks.
 
 > [!TIP]
 > **VPN Tunnel Benefits**:
@@ -396,6 +417,13 @@ Join our official Telegram community to chat with users and test preview builds:
   * **iOS**: Saved in secure System Keychain.
   * **macOS (Out-of-Store)**: Utilizes App Sandbox Local Encrypted Storage; transitions to System Keychain in App Store edition.
   * **Windows**: Encrypted within Windows Credential Manager & Registry.
+* **🔒 One-Click Anti-Brute-Force Hardening & Persistence (100% Immunity)**:
+  * **Mechanism**: Once SSH key pairing is established, toggle "Disable SSH Password Authentication" in "Settings ➔ Security". The App automatically updates `/boot/config/ssh/sshd_config` and `/etc/ssh/sshd_config` (`PasswordAuthentication no`, `ChallengeResponseAuthentication no`, `KbdInteractiveAuthentication no`) and reloads SSHD.
+  * **Flash Drive Persistence**: Hardening configs are stored directly on the Unraid boot flash drive (`/boot/config/ssh/`), keeping the security policy active across OS upgrades, power cuts, and reboots.
+  * **Emergency Rollback Command**: If you lose your client device, you can instantly restore default password authentication by running a single command in the Unraid WebGUI Terminal:
+    ```bash
+    sed -i 's/^PasswordAuthentication.*/PasswordAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config && /etc/rc.d/rc.sshd restart
+    ```
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
