@@ -149,7 +149,7 @@ App 不在本地存储明文 root 密码。配对成功后统一走 RSA/ED25519 
 
 > [!IMPORTANT]
 > **公网 SSH 隧道安全黄金法则**：  
-> 若您在外网环境下选择【SSH 隧道穿透】并在路由器上暴露了 SSH 端口，**在 App 首次配对成功后，请务必前往「设置 ➔ 安全」中开启「禁用 SSH 密码登录 (防爆破)」**。开启后 Unraid 将关闭密码与交互式认证，仅允许持有本设备私钥的客户端连接，彻底斩断公网黑客的自动化字典撞库与暴力破解通道。
+> 若您在外网环境下选择【SSH 隧道穿透】并在路由器上暴露了 SSH 端口，**在 App 首次配对成功后，请务必前往「设置 ➔ 连接配置」中开启「禁用 SSH 密码登录 (防爆破)」**。开启后 Unraid 将关闭密码与交互式认证，仅允许持有本设备私钥的客户端连接，彻底斩断公网黑客的自动化字典撞库与暴力破解通道。
 
 > [!TIP]
 > **VPN 隧道优势**：
@@ -185,7 +185,7 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 
 > [!TIP]
 > **💡 授权政策：一次激活，全家共享，不限设备**  
-> 专业版授权与 Unraid 服务器引导 U 盘唯一硬件 GUID 绑定（单授权最多可同时绑定 3 台服务器）。服务器激活后，所有连接该服务器的客户端设备（手机/平板/Mac/Windows）**均会自动解锁全部 PRO 专业功能**。购买与激活入口在 App 内 **「设置 ➔ 解锁专业版」**。
+> 专业版授权与 Unraid 服务器引导 U 盘唯一硬件 GUID 绑定（单授权最多可同时绑定 3 台服务器）。服务器激活后，所有连接该服务器的客户端设备（手机/平板/Mac/Windows）**均会自动解锁全部 PRO 专业功能**。购买与激活入口在 App 内 **「设置 ➔ Pro 授权」**。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -229,11 +229,17 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
   - **macOS (独立分发版)**：采用 App 独立隔离沙盒（SharedPreferences Sandbox）加密存储，防跨目录访问；未来商店版将支持 Keychain。
   - **Windows**：使用 Windows Credential & Registry 隔离沙盒物理存储。
 - **🔒 一键防爆破加固与持久化机制 (100% 免疫公网暴力破解)**：
-  - **加固原理**：在客户端成功建立私钥免密配对后，可直接在「设置 ➔ 安全」中一键开启「禁用 SSH 密码登录」。App 会自动更新 `/boot/config/ssh/sshd_config` 与 `/etc/ssh/sshd_config`，将密码验证及交互式认证彻底关闭（`PasswordAuthentication no`、`ChallengeResponseAuthentication no`、`KbdInteractiveAuthentication no`）并热重载 SSHD。
+  - **加固原理**：在客户端成功建立私钥免密配对后，可直接在「设置 ➔ 连接配置」中一键开启「禁用 SSH 密码登录」。App 会自动更新 `/boot/config/ssh/sshd_config` 与 `/etc/ssh/sshd_config`，将密码验证及交互式认证彻底关闭（`PasswordAuthentication no`、`ChallengeResponseAuthentication no`、`KbdInteractiveAuthentication no`）并热重载 SSHD。
   - **开机与断电持久化**：由于配置写入了 Unraid 引导 U 盘闪存（`/boot/config/ssh/`），宿主机在经历系统更新、断电重启后，防爆破安全策略依然永久生效。
-  - **极客应急还原指令**：若因换机或客户端设备丢失导致无法密钥登录，用户可随时登录 Unraid Web 终端（WebUI Terminal）执行单行指令秒级还原默认密码登录：
+  - **极客应急还原指令**：若因换机或客户端设备丢失导致无法密钥登录，用户可随时登录 Unraid Web 终端（WebUI Terminal）粘贴运行 App 内同款还原脚本，秒级恢复默认密码登录：
     ```bash
-    sed -i 's/^PasswordAuthentication.*/PasswordAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config && /etc/rc.d/rc.sshd restart
+    if [ ! -f /boot/config/ssh/sshd_config ]; then cp /etc/ssh/sshd_config /boot/config/ssh/sshd_config; fi
+    grep -q "^KbdInteractiveAuthentication" /boot/config/ssh/sshd_config || echo "KbdInteractiveAuthentication yes" >> /boot/config/ssh/sshd_config
+    grep -q "^KbdInteractiveAuthentication" /etc/ssh/sshd_config || echo "KbdInteractiveAuthentication yes" >> /etc/ssh/sshd_config
+    sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config
+    sed -i 's/^#\?ChallengeResponseAuthentication.*/ChallengeResponseAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config
+    sed -i 's/^#\?KbdInteractiveAuthentication.*/KbdInteractiveAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config
+    /etc/rc.d/rc.sshd restart
     ```
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
@@ -340,7 +346,7 @@ To guarantee server safety, we **highly recommend using a VPN tunnel (such as Wi
 
 > [!IMPORTANT]
 > **Golden Rule for WAN SSH Tunneling**:  
-> If you expose the SSH port to the public internet for 【SSH Tunneling】, **you MUST navigate to "Settings ➔ Security" and enable "Disable SSH Password Authentication (Anti-Brute-Force)" immediately after initial pairing**. Once enabled, Unraid rejects all password and keyboard-interactive authentication attempts, ensuring 100% immunity against automated dictionary and brute-force attacks.
+> If you expose the SSH port to the public internet for 【SSH Tunneling】, **you MUST navigate to "Settings ➔ Connection" and enable "Disable SSH Password Authentication (Anti-Brute-Force)" immediately after initial pairing**. Once enabled, Unraid rejects all password and keyboard-interactive authentication attempts, ensuring 100% immunity against automated dictionary and brute-force attacks.
 
 > [!TIP]
 > **VPN Tunnel Benefits**:
@@ -376,7 +382,7 @@ Easy Unraid adopts a sustainable model: "Essential monitoring features are perma
 
 > [!TIP]
 > **💡 Sustainable Licensing Policy: One-Time Activation, Unlimited Clients**  
-> The Pro license is directly bound to your Unraid server's unique Flash Drive GUID (supports up to 3 servers per license). Once activated, all client devices (phones, tablets, Mac, Windows) connecting to this server **automatically unlock all PRO features**. Activation is in the App under **"Settings ➔ Unlock Pro"**.
+> The Pro license is directly bound to your Unraid server's unique Flash Drive GUID (supports up to 3 servers per license). Once activated, all client devices (phones, tablets, Mac, Windows) connecting to this server **automatically unlock all PRO features**. Activation is in the App under **"Settings ➔ Pro License"**.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -418,11 +424,17 @@ Join our official Telegram community to chat with users and test preview builds:
   * **macOS (Out-of-Store)**: Utilizes App Sandbox Local Encrypted Storage; transitions to System Keychain in App Store edition.
   * **Windows**: Encrypted within Windows Credential Manager & Registry.
 * **🔒 One-Click Anti-Brute-Force Hardening & Persistence (100% Immunity)**:
-  * **Mechanism**: Once SSH key pairing is established, toggle "Disable SSH Password Authentication" in "Settings ➔ Security". The App automatically updates `/boot/config/ssh/sshd_config` and `/etc/ssh/sshd_config` (`PasswordAuthentication no`, `ChallengeResponseAuthentication no`, `KbdInteractiveAuthentication no`) and reloads SSHD.
+  * **Mechanism**: Once SSH key pairing is established, toggle "Disable SSH Password Authentication" in "Settings ➔ Connection". The App automatically updates `/boot/config/ssh/sshd_config` and `/etc/ssh/sshd_config` (`PasswordAuthentication no`, `ChallengeResponseAuthentication no`, `KbdInteractiveAuthentication no`) and reloads SSHD.
   * **Flash Drive Persistence**: Hardening configs are stored directly on the Unraid boot flash drive (`/boot/config/ssh/`), keeping the security policy active across OS upgrades, power cuts, and reboots.
-  * **Emergency Rollback Command**: If you lose your client device, you can instantly restore default password authentication by running a single command in the Unraid WebGUI Terminal:
+  * **Emergency Rollback Command**: If you lose your client device, you can instantly restore default password authentication by running the same in-app script directly in your Unraid WebGUI Terminal:
     ```bash
-    sed -i 's/^PasswordAuthentication.*/PasswordAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config && /etc/rc.d/rc.sshd restart
+    if [ ! -f /boot/config/ssh/sshd_config ]; then cp /etc/ssh/sshd_config /boot/config/ssh/sshd_config; fi
+    grep -q "^KbdInteractiveAuthentication" /boot/config/ssh/sshd_config || echo "KbdInteractiveAuthentication yes" >> /boot/config/ssh/sshd_config
+    grep -q "^KbdInteractiveAuthentication" /etc/ssh/sshd_config || echo "KbdInteractiveAuthentication yes" >> /etc/ssh/sshd_config
+    sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config
+    sed -i 's/^#\?ChallengeResponseAuthentication.*/ChallengeResponseAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config
+    sed -i 's/^#\?KbdInteractiveAuthentication.*/KbdInteractiveAuthentication yes/g' /boot/config/ssh/sshd_config /etc/ssh/sshd_config
+    /etc/rc.d/rc.sshd restart
     ```
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
