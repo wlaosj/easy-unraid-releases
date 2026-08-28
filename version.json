@@ -1,5 +1,5 @@
 {
-  "tag_name": "v1.2.5+32",
-  "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.2.5+32",
-  "body": "### 🇨🇳 中文更新日志\n* 🚀 **体验演示模式（Demo Mode）全新上线**：\n  * 支持免配置一键快速预览仪表盘监控、硬件遥测、文件管理与智能相册照片流。\n* 🍎 **iOS 应用内购买（IAP）与授权体验优化**：\n  * 优化 Pro 终身版购买与一键恢复购买流程，支持单个 Apple ID 授权绑定管理最多 3 台 Unraid 宿主机。\n* 📱 **连接引导与交互体验优化**：\n  * 优化首次启动连接向导，提升界面流畅度与多处细节体验。\n\n### 🇬🇧 English Changelog\n* 🚀 **Brand New Demo Mode**:\n  * Explore dashboard telemetry, file management, and smart photo gallery without configuring a server.\n* 🍎 **iOS In-App Purchase (IAP) & Licensing Polish**:\n  * Improved Pro Lifetime purchase and restore flow, supporting 1 Apple ID for up to 3 Unraid servers.\n* 📱 **Onboarding & UX Improvements**:\n  * Enhanced first-launch connection guide and refined UI interactions."
+  "tag_name": "v1.2.6+33",
+  "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.2.6+33",
+  "body": "### 🇨🇳 中文更新日志\n* 🔄 **设备换机与解绑体验优化**：\n  * 支持全平台一键注销当前 Unraid 宿主机，方便换机时无缝迁移 Pro 授权；Apple 内购用户支持免输入密钥即时解绑并释放名额。\n* 🏷️ **授权管理界面清晰升级**：\n  * 授权面板新增直观展示授权来源（Apple ID 官方内购 / 产品激活密钥），状态一目了然。\n* 🧹 **细节体验与稳定性提升**：\n  * 优化设置界面交互，修复多处细节问题并提升整体运行稳定性。\n\n### 🇬🇧 English Changelog\n* 🔄 **Device Migration & Unbinding Polish**:\n  * Added 1-tap Unraid server unbinding for seamless license transfer; Apple IAP users can now unbind instantly with zero key input.\n* 🏷️ **License Management Upgrade**:\n  * Added clear license source indicator (Apple ID In-App Purchase / Product License Key) in Settings.\n* 🧹 **UX Polish & Stability Improvements**:\n  * Refined settings interactions and enhanced overall app performance and stability."
 }
