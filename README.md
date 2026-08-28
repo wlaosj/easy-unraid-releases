@@ -171,19 +171,17 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 
 | 功能模块 | 免费版 (Free) | 专业版 (Pro) |
 | :--- | :---: | :---: |
-| **📊 实时硬件仪表盘** (CPU/内存/网速看板/官方矢量图标) | **✅ 免费** | **✅ 免费** |
-| **💾 存储阵列监控** (磁盘空间/温度/坏道警告/3D拟物机箱) | **✅ 免费** | **✅ 免费** |
-| **🔌 插件管理与检测** (插件更新检测/日志查看/单插件升级) | **✅ 免费** | **✅ 免费** |
-| **⚙️ 基础系统配置** (多服务器配置/自动切换/820黄金自适应) | **✅ 免费** | **✅ 免费** |
-| **🔒 SSH 隧道与安全双模连接** (直连/加密隧道) | **✅ 免费** | **✅ 免费** |
+| **📊 实时硬件仪表盘概览** (首页 CPU/内存/实时网络波形/官方矢量图标) | **✅ 免费** | **✅ 免费** |
+| **🖥️ 机箱阵列总览看板** (首页 3D 拟物机箱面板/总空间与运行状态概览) | **✅ 免费** | **✅ 免费** |
+| **⚙️ 基础系统与连接配置** (多服务器切换/局域网直连/SSH 加密隧道/820黄金自适应) | **✅ 免费** | **✅ 免费** |
 | **🛡️ 登录安全审计** (会话日志解析与图形化统计) | **✅ 免费** | **✅ 免费** |
-| **🛒 Community Applications 应用市场** (CA 应用商店/XML 模版一键装配) | ❌ 需激活 | **✅ 解锁** |
-| **📦 插件一键「全部更新」** (排队串行批量升级与日志合并) | ❌ 需激活 | **✅ 解锁** |
-| **🧠 自托管 AI 智能相册** (离线 CLIP 搜图/人脸聚类/大图视差/预览时长可配) | ❌ 需激活 | **✅ 解锁** |
-| **📁 极速文件管理器** (SFTP/4K 串流/压缩包解解压/拖拽上传/全局搜索) | ❌ 需激活 | **✅ 解锁** |
-| **🗑️ 误删回收站保护** (物理回收站防灾缓冲) | ❌ 需激活 | **✅ 解锁** |
-| **🐳 Docker 容器与 Compose 编排** (日志/一键更新/YAML 高亮/部署) | ❌ 需激活 | **✅ 解锁** |
-| **🚀 虚拟机控制与 SSH 终端** (VM 控制/全功能终端/禁用密码登录) | ❌ 需激活 | **✅ 解锁** |
+| **💾 存储阵列二级体检详情** (各磁盘读写速度/温度/SMART坏道体检) | ❌ 需激活 | **✅ 解锁** |
+| **🐳 Docker 容器与 Compose 管理** (容器列表/日志/一键更新/YAML 高亮/编排部署) | ❌ 需激活 | **✅ 解锁** |
+| **🔌 插件全量管理与批量升级** (插件列表/更新检测/日志对比/一键「全部更新」) | ❌ 需激活 | **✅ 解锁** |
+| **🛒 Community Applications 官方应用市场** (CA 应用商店/XML 模版一键装配) | ❌ 需激活 | **✅ 解锁** |
+| **📁 极速文件管理器** (SFTP 传输/4K 串流/压缩包解压/拖拽上传/系统级分享转存/防灾回收站) | ❌ 需激活 | **✅ 解锁** |
+| **🧠 自托管 AI 智能相册** (离线 CLIP 语义搜图/人脸聚类/大图视差滑屏/预览时长配置/LAN 直连) | ❌ 需激活 | **✅ 解锁** |
+| **🚀 虚拟机控制与 SSH 终端** (VM 状态控制/VNC 远程控制台/全功能 SSH 终端/一键禁用密码登录) | ❌ 需激活 | **✅ 解锁** |
 
 > [!TIP]
 > **💡 授权政策：一次激活，全家共享，不限客户端设备**  
@@ -384,19 +382,17 @@ Easy Unraid adopts a sustainable model: "Essential monitoring features are perma
 
 | Feature | Free Edition | Pro Edition |
 | :--- | :---: | :---: |
-| **📊 Real-time Dashboard** (CPU/RAM/Network real-time stats & vector icons) | **✅ Free** | **✅ Free** |
-| **💾 Array Monitor** (Disk utilization/temperatures/smart errors/3D Bezel) | **✅ Free** | **✅ Free** |
-| **🔌 Plugin Manager** (Update checking/changelog view/single upgrade) | **✅ Free** | **✅ Free** |
-| **⚙️ Server Configurations** (Multi-server switching & 820px layout) | **✅ Free** | **✅ Free** |
-| **🔒 SSH Tunneling** (Direct and secure local port forwarding) | **✅ Free** | **✅ Free** |
+| **📊 Real-time Dashboard Telemetry** (Overview CPU/RAM/Network live wave charts & vector icons) | **✅ Free** | **✅ Free** |
+| **🖥️ Array Chassis Bezel Overview** (Overview 3D skeuomorphic bezel & storage health overview) | **✅ Free** | **✅ Free** |
+| **⚙️ Server Configurations** (Multi-server switching, direct connection, SSH tunneling, 820px layout) | **✅ Free** | **✅ Free** |
 | **🛡️ Security Audit Logs** (Login session auditing and metrics) | **✅ Free** | **✅ Free** |
+| **💾 Array Disk Deep Health Diagnostics** (Per-disk speeds, temperatures, and SMART error checks) | ❌ Pro Only | **✅ Unlocked** |
+| **🐳 Docker & Compose Management** (Container list, live logs, 1-click update, YAML editor, deployment) | ❌ Pro Only | **✅ Unlocked** |
+| **🔌 Plugin Management & Batch Upgrades** (Plugin list, changelog compare, 1-click "Update All") | ❌ Pro Only | **✅ Unlocked** |
 | **🛒 Community Applications Store** (CA App Store & XML Template parser) | ❌ Pro Only | **✅ Unlocked** |
-| **📦 Plugin "Update All" Batch Upgrade** (Queued background batch upgrades) | ❌ Pro Only | **✅ Unlocked** |
-| **🧠 Smart Gallery** (Offline CLIP search, face clustering, preview config, LAN bypass) | ❌ Pro Only | **✅ Unlocked** |
-| **📁 File Manager** (SFTP / 4K streaming / ZIP & TAR / Drag & Drop / Deep search) | ❌ Pro Only | **✅ Unlocked** |
-| **🗑️ Safe Recycle Bin** (App-level delete protection) | ❌ Pro Only | **✅ Unlocked** |
-| **🐳 Docker & Compose** (Logs/one-click updates/YAML editor/deployments) | ❌ Pro Only | **✅ Unlocked** |
-| **🚀 VM & SSH Console** (Virtual machines/SSH terminal/Disable password auth) | ❌ Pro Only | **✅ Unlocked** |
+| **📁 Advanced File Manager** (SFTP, 4K streaming, ZIP & TAR, Drag & Drop, system share, recycle bin) | ❌ Pro Only | **✅ Unlocked** |
+| **🧠 Smart Gallery with Offline AI** (Offline CLIP search, face clustering, preview config, LAN bypass) | ❌ Pro Only | **✅ Unlocked** |
+| **🚀 VM & SSH Console** (Virtual machines power & VNC, full-featured SSH terminal, anti-brute-force) | ❌ Pro Only | **✅ Unlocked** |
 
 > [!TIP]
 > **💡 Sustainable Licensing Policy: One-Time Activation, Unlimited Clients**  
