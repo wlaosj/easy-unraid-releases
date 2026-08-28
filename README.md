@@ -34,6 +34,7 @@
     *   [🚀 快速配对指南](#quick-start-zh)
     *   [🌐 外网安全访问建议](#remote-zh)
     *   [💎 免费版与专业版说明](#free-vs-pro-zh)
+    *   [🛒 Pro 终身授权与卡密购买](#pricing-zh)
     *   [📥 客户端下载通道](#downloads-zh)
     *   [🛡️ 安全背书与极客审计](#security-zh)
 *   **[🇺🇸 English Introduction](#intro-en)**
@@ -41,6 +42,7 @@
     *   [🚀 Quick Start Guide](#quick-start-en)
     *   [🌐 Remote Access & Security](#remote-en)
     *   [💎 Free vs Pro Edition](#free-vs-pro-en)
+    *   [🛒 Purchase Pro Lifetime License](#pricing-en)
     *   [📥 Downloads](#downloads-en)
     *   [🛡️ Security & Privacy](#security-en)
 *   **[📸 运行截图 (Screenshots)](#screenshots)**
@@ -186,10 +188,22 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 > [!TIP]
 > **💡 授权政策：一次激活，全家共享，不限客户端设备**  
 > 专业版授权与 Unraid 服务器引导 U 盘唯一硬件 GUID 绑定（**单个 Pro 授权支持绑定最多 3 台 Unraid 宿主机**）。服务器激活后，所有连接该服务器的客户端设备（手机/平板/Mac/Windows）**均会自动解锁全部 PRO 专业功能**。
->
-> 🛒 **Pro 终身授权获取通道**：
-> - 🍏 **iOS / iPadOS 用户**：直接在 App Store 下载客户端，进入「设置 ➔ Pro 授权」使用 **Apple ID 官方应用内购买**（支持极速购买与全家设备一键恢复）。
-> - 💻 **Android / Windows / macOS / 网页用户**：前往 **[👉 官方卡密商城 (发卡猫)](https://c.fakamiao.top/shopDetail/6WNe26?shopId=6WNe26)** 购买 32 位终身激活卡密（官方授权即买即发，支持微信/支付宝，购卡后在 App 内输入即可永久激活）。
+
+<a name="pricing-zh"></a>
+
+### 🛒 Pro 终身授权获取与卡密购买 (Get Pro Lifetime)
+
+Easy Unraid 采用 **“一次付费，终身授权，全家畅享”** 的良性买断机制：
+* **硬件级单卡密 3 台授权**：单个 Pro 授权绑定 Unraid 服务器的引导 U 盘唯一硬件 GUID（最多可同时授权 **3 台 Unraid 宿主机**）；
+* **客户端零限制**：服务器激活后，家庭局域网或远程连接该服务器的所有手机（iOS/Android）、平板（iPad）及电脑（Mac/Windows）**全量自动解锁 PRO 全部功能**，无需在每个客户端重复购买！
+
+| 平台 / 操作系统 | 推荐获取渠道 | 购买与激活方式 |
+| :--- | :--- | :--- |
+| 🍏 **iOS / iPadOS 苹果端** | **App Store 官方内购 (Apple IAP)** | 在 App Store 下载安装后，进入「设置 ➔ Pro 授权」使用 Apple ID 官方内购支付，支持全家设备一键恢复。 |
+| 💻 **Android / Windows / macOS** | **[👉 官方卡密商城 (发卡猫)](https://c.fakamiao.top/shopDetail/6WNe26?shopId=6WNe26)** | 官方授权 24 小时自动发卡，支持微信与支付宝。购买后在 App 内输入 32 位激活卡密即可秒级永久解锁。 |
+
+> [!TIP]
+> 💡 **退换与换机保障**：如未来更换 Unraid 引导优盘或升级硬件，可在 App 内使用「注销当前设备」功能自助无损迁移授权至新机器。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -387,10 +401,22 @@ Easy Unraid adopts a sustainable model: "Essential monitoring features are perma
 > [!TIP]
 > **💡 Sustainable Licensing Policy: One-Time Activation, Unlimited Clients**  
 > The Pro license is directly bound to your Unraid server's unique Flash Drive GUID (**each Pro license supports up to 3 Unraid servers simultaneously**). Once activated, all client devices (phones, tablets, Mac, Windows) connecting to this server **automatically unlock all PRO features**.
->
-> 🛒 **How to Get Easy Unraid Pro**:
-> - 🍏 **iOS / iPadOS Users**: Download from the App Store and purchase directly via **Apple In-App Purchase** in "Settings ➔ Pro License" (supports Family Sharing and 1-tap restore).
-> - 💻 **Android / Windows / macOS Users**: Purchase a 32-character Lifetime License Key via **[👉 Official License Key Store (Fakamiao)](https://c.fakamiao.top/shopDetail/6WNe26?shopId=6WNe26)** (Instant delivery, supports WeChat/Alipay, enter key in App to activate permanently).
+
+<a name="pricing-en"></a>
+
+### 🛒 Purchase Pro Lifetime License
+
+Easy Unraid adopts a sustainable **"One-Time Purchase, Lifetime License, Family Shared"** model:
+* **3 Unraid Servers per License**: A single Pro license binds to the unique Flash Drive GUID of your Unraid server (authorizes up to **3 Unraid servers simultaneously**);
+* **Unlimited Client Devices**: Once a server is activated, all client devices (iOS, Android, iPad, Mac, Windows) connecting to this server **automatically unlock all PRO features** without repeated purchases!
+
+| Platform / OS | Recommended Channel | Purchase & Activation Method |
+| :--- | :--- | :--- |
+| 🍏 **iOS / iPadOS** | **Apple In-App Purchase (IAP)** | Download from the App Store, navigate to "Settings ➔ Pro License" to purchase via your Apple ID (supports Family Sharing & 1-tap restore). |
+| 💻 **Android / Windows / macOS** | **[👉 Official License Key Store (Fakamiao)](https://c.fakamiao.top/shopDetail/6WNe26?shopId=6WNe26)** | 24/7 automated delivery supporting WeChat Pay & Alipay. Enter your 32-character key in the App to activate permanently. |
+
+> [!TIP]
+> 💡 **Hardware Migration Guarantee**: If you ever replace your Unraid flash drive or upgrade hardware, you can easily migrate your license using the in-app "Deactivate/Unbind" feature.
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
