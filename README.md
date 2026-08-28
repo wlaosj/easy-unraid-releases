@@ -184,8 +184,12 @@ Easy Unraid 采用“基础核心功能永久免费，高级生产力工具付�
 | **🚀 虚拟机控制与 SSH 终端** (VM 控制/全功能终端/禁用密码登录) | ❌ 需激活 | **✅ 解锁** |
 
 > [!TIP]
-> **💡 授权政策：一次激活，全家共享，不限设备**  
-> 专业版授权与 Unraid 服务器引导 U 盘唯一硬件 GUID 绑定（单授权最多可同时绑定 3 台服务器）。服务器激活后，所有连接该服务器的客户端设备（手机/平板/Mac/Windows）**均会自动解锁全部 PRO 专业功能**。购买与激活入口在 App 内 **「设置 ➔ Pro 授权」**。
+> **💡 授权政策：一次激活，全家共享，不限客户端设备**  
+> 专业版授权与 Unraid 服务器引导 U 盘唯一硬件 GUID 绑定（**单个 Pro 授权支持绑定最多 3 台 Unraid 宿主机**）。服务器激活后，所有连接该服务器的客户端设备（手机/平板/Mac/Windows）**均会自动解锁全部 PRO 专业功能**。
+>
+> 🛒 **Pro 终身授权获取通道**：
+> - 🍏 **iOS / iPadOS 用户**：直接在 App Store 下载客户端，进入「设置 ➔ Pro 授权」使用 **Apple ID 官方应用内购买**（支持极速购买与全家设备一键恢复）。
+> - 💻 **Android / Windows / macOS / 网页用户**：前往 **[👉 官方卡密商城 (发卡猫)](https://c.fakamiao.top/shopDetail/6WNe26?shopId=6WNe26)** 购买 32 位终身激活卡密（官方授权即买即发，支持微信/支付宝，购卡后在 App 内输入即可永久激活）。
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
@@ -382,7 +386,11 @@ Easy Unraid adopts a sustainable model: "Essential monitoring features are perma
 
 > [!TIP]
 > **💡 Sustainable Licensing Policy: One-Time Activation, Unlimited Clients**  
-> The Pro license is directly bound to your Unraid server's unique Flash Drive GUID (supports up to 3 servers per license). Once activated, all client devices (phones, tablets, Mac, Windows) connecting to this server **automatically unlock all PRO features**. Activation is in the App under **"Settings ➔ Pro License"**.
+> The Pro license is directly bound to your Unraid server's unique Flash Drive GUID (**each Pro license supports up to 3 Unraid servers simultaneously**). Once activated, all client devices (phones, tablets, Mac, Windows) connecting to this server **automatically unlock all PRO features**.
+>
+> 🛒 **How to Get Easy Unraid Pro**:
+> - 🍏 **iOS / iPadOS Users**: Download from the App Store and purchase directly via **Apple In-App Purchase** in "Settings ➔ Pro License" (supports Family Sharing and 1-tap restore).
+> - 💻 **Android / Windows / macOS Users**: Purchase a 32-character Lifetime License Key via **[👉 Official License Key Store (Fakamiao)](https://c.fakamiao.top/shopDetail/6WNe26?shopId=6WNe26)** (Instant delivery, supports WeChat/Alipay, enter key in App to activate permanently).
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
 
