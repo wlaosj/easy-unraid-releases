@@ -68,4 +68,4 @@ Welcome to **Easy Unraid** ("the App"). The App is a dedicated mobile management
 如果您对本隐私政策或数据安全有任何疑问、意见或反馈，请通过以下方式与开发者取得联系：
 
 * **GitHub 项目主页**：[https://github.com/wlaosj/easy-unraid-releases](https://github.com/wlaosj/easy-unraid-releases)
-* **开发者邮箱**：[1006509988@qq.com](mailto:1006509988@qq.com)
+* **开发者邮箱**：[qq918652593@gmail.com](mailto:qq918652593@gmail.com)
