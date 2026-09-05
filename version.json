@@ -1,5 +1,5 @@
 {
-  "tag_name": "v1.2.9+36",
-  "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.2.9+36",
-  "body": "### 🇨🇳 中文更新日志\n* 🔧 **App Store 合规优化**：\n  * 移除 Easy Mihomo 网络代理管理模块，解决 iOS App Store 审核合规问题（Guideline 5.6）。\n\n### 🇬🇧 English Changelog\n* 🔧 **App Store Compliance**:\n  * Removed the Easy Mihomo network proxy management module to comply with iOS App Store Review Guidelines (Guideline 5.6).\n\n---"
+  "tag_name": "v1.2.10+37",
+  "html_url": "https://github.com/wlaosj/easy-unraid-releases/releases/tag/v1.2.10+37",
+  "body": "### 🇨🇳 中文更新日志\n* 🌐 **智能相册全界面深度英文国际化适配**：\n  * 全面完善相册模块的英文双语支持，完整覆盖相册主浏览页、智能回忆漫游卡片、时间轴日期标题、批量操作栏、回收站管理、图片选择器、备份设置与任务中心等所有界面、弹窗与提示。\n* 🎨 **排版与自适应细节精修**：\n  * 优化英文文本在不同屏幕与对话框中的自适应排版，杜绝换行截断与渲染溢出。\n\n### 🇬🇧 English Changelog\n* 🌐 **Full Gallery Internationalization Support**:\n  * Fully localized the entire Photo Gallery module in English, covering Gallery Browser, Smart Memories & Wanderlust cards, timeline date headers, batch actions, Trash, Photo Picker, Backup Settings, and Backup Task Center.\n* 🎨 **UI & Layout Polish**:\n  * Refined responsive layouts for multilingual text across various screen sizes and dialogs to prevent overflow or awkward wrapping.\n\n---"
 }
