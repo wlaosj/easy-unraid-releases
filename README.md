@@ -197,8 +197,8 @@ Easy Unraid 采用 **“一次付费，终身授权，全家畅享”** 的良�
 
 | 平台 / 操作系统 | 推荐获取渠道 | 购买与激活方式 |
 | :--- | :--- | :--- |
-| 🍏 **iOS / iPadOS 苹果端** | **App Store 官方内购 (Apple IAP)** | 在 App Store 下载安装后，进入「设置 ➔ Pro 授权」使用 Apple ID 官方内购支付，支持全家设备一键恢复。 |
-| 💻 **Android / Windows / macOS** | **[👉 官方卡密商城 (发卡猫)](https://c.fakamiao.top/shopDetail/6WNe26?shopId=6WNe26)** | 官方授权 24 小时自动发卡，支持微信与支付宝。购买后在 App 内输入 32 位激活卡密即可秒级永久解锁。 |
+| 🍏 **iOS / iPadOS 苹果端** | **App Store 官方内购 (Apple IAP)** | 在 App Store 下载安装后，进入「设置 ➔ Pro 授权」使用 Apple ID 官方内购支付，支持一键恢复购买。详情请参阅 [👉 iOS 官方支持文档](SUPPORT.md)。 |
+| 💻 **桌面与移动客户端** | **跨平台终身授权** | 遵循跨平台多设备授权规范，激活后支持所有客户端自动同步解锁 Pro。详情请参阅各客户端内授权设置。 |
 
 > [!TIP]
 > 💡 **退换与换机保障**：如未来更换 Unraid 引导优盘或升级硬件，可在 App 内使用「注销当前设备」功能自助无损迁移授权至新机器。
@@ -408,8 +408,8 @@ Easy Unraid adopts a sustainable **"One-Time Purchase, Lifetime License, Family 
 
 | Platform / OS | Recommended Channel | Purchase & Activation Method |
 | :--- | :--- | :--- |
-| 🍏 **iOS / iPadOS** | **Apple In-App Purchase (IAP)** | Download from the App Store, navigate to "Settings ➔ Pro License" to purchase via your Apple ID (supports Family Sharing & 1-tap restore). |
-| 💻 **Android / Windows / macOS** | **[👉 Official License Key Store (Fakamiao)](https://c.fakamiao.top/shopDetail/6WNe26?shopId=6WNe26)** | 24/7 automated delivery supporting WeChat Pay & Alipay. Enter your 32-character key in the App to activate permanently. |
+| 🍏 **iOS / iPadOS** | **Apple In-App Purchase (IAP)** | Download from the App Store, navigate to "Settings ➔ Pro License" to purchase via your Apple ID with 1-tap restore. See [👉 iOS Official Support Guide](SUPPORT.md) for details. |
+| 💻 **Desktop & Other Platforms** | **Cross-Platform Lifetime License** | Complies with multi-device licensing standards. Once activated, Pro features automatically unlock across connected devices. |
 
 > [!TIP]
 > 💡 **Hardware Migration Guarantee**: If you ever replace your Unraid flash drive or upgrade hardware, you can easily migrate your license using the in-app "Deactivate/Unbind" feature.
