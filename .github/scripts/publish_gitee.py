@@ -47,18 +47,51 @@ def extract_changelog(version_tag):
                 print(f"[Gitee Publish] Error reading changelog from {path}: {e}")
     return changelog
 
+def ensure_repo_initialized(owner, repo, token):
+    headers = {"User-Agent": "Easy-Unraid-CI-Publisher", "Accept": "application/json"}
+    check_url = f"{GITEE_API_BASE}/repos/{owner}/{repo}/branches"
+    try:
+        r = requests.get(check_url, params={"access_token": token}, headers=headers, timeout=15)
+        if r.status_code == 200 and isinstance(r.json(), list) and len(r.json()) > 0:
+            return True
+    except Exception as e:
+        print(f"[Gitee Publish] Check branches encountered error: {e}")
+
+    # 若为空仓，自动创建 README.md 产生首个提交与 master 分支
+    print(f"[Gitee Publish] Initializing empty repo '{owner}/{repo}' with initial README.md...")
+    create_url = f"{GITEE_API_BASE}/repos/{owner}/{repo}/contents/README.md"
+    import base64
+    content_b64 = base64.b64encode(b"# Easy Unraid (Mainland Mirror)\n\nOfficial Releases mirror.\n").decode("utf-8")
+    payload = {
+        "access_token": token,
+        "content": content_b64,
+        "message": "Initial commit for releases mirror"
+    }
+    try:
+        r = requests.post(create_url, json=payload, headers=headers, timeout=15)
+        if r.status_code in (200, 201):
+            print("[Gitee Publish] Successfully initialized repo with master branch!")
+            time.sleep(2)
+            return True
+    except Exception as e:
+        print(f"[Gitee Publish] Auto init repo encountered error: {e}")
+    return False
+
 def get_or_create_release(owner, repo, tag_name, token, changelog):
     headers = {
         "User-Agent": "Easy-Unraid-CI-Publisher",
         "Accept": "application/json"
     }
 
+    # 0. 确保仓库非空且具有 master 分支
+    ensure_repo_initialized(owner, repo, token)
+
     # 1. 检查 Release 是否已存在
     check_url = f"{GITEE_API_BASE}/repos/{owner}/{repo}/releases/tags/{tag_name}"
     params = {"access_token": token}
     try:
         r = requests.get(check_url, params=params, headers=headers, timeout=15)
-        if r.status_code == 200:
+        if r.status_code == 200 and isinstance(r.json(), dict):
             data = r.json()
             print(f"[Gitee Publish] Release '{tag_name}' already exists with ID: {data.get('id')}")
             return data.get("id")
@@ -88,7 +121,7 @@ def get_or_create_release(owner, repo, tag_name, token, changelog):
             elif r.status_code == 400 and "已存在" in r.text:
                 # 再次查询已有
                 r2 = requests.get(check_url, params=params, headers=headers, timeout=15)
-                if r2.status_code == 200:
+                if r2.status_code == 200 and isinstance(r2.json(), dict):
                     return r2.json().get("id")
             print(f"[Gitee Publish] Attempt {attempt} failed: {r.status_code} - {r.text}")
         except Exception as e:
@@ -104,6 +137,10 @@ def upload_asset(owner, repo, release_id, token, file_path):
 
     upload_url = f"{GITEE_API_BASE}/repos/{owner}/{repo}/releases/{release_id}/attach_files"
     data = {"access_token": token}
+
+    if file_size_mb > 98.0:
+        print(f"[Gitee Publish] ⚠️ Warning: '{filename}' ({file_size_mb:.2f} MB) exceeds Gitee 100MB limit, skipping.")
+        return False
 
     for attempt in range(1, 4):
         try:
