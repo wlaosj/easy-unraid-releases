@@ -137,6 +137,16 @@ jobs:
 
       - name: Create DMG File
         run: |
+          # 1. 显式将自研 Rust 原生 SFTP 动态库嵌入到 App Frameworks 目录中并赋予执行权限
+          mkdir -p "build/macos/Build/Products/Release/Easy Unraid.app/Contents/Frameworks"
+          if [ -f "macos/Frameworks/libnative_sftp.dylib" ]; then
+            echo "Embedding libnative_sftp.dylib into macOS App bundle..."
+            cp -f "macos/Frameworks/libnative_sftp.dylib" "build/macos/Build/Products/Release/Easy Unraid.app/Contents/Frameworks/"
+            chmod +x "build/macos/Build/Products/Release/Easy Unraid.app/Contents/Frameworks/libnative_sftp.dylib"
+          else
+            echo "::warning::macos/Frameworks/libnative_sftp.dylib not found!"
+          fi
+
           cd build/macos/Build/Products/Release/
           chmod -R 755 "Easy Unraid.app"
           chmod +x "Easy Unraid.app/Contents/MacOS/"*
