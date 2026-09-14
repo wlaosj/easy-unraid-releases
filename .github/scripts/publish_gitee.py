@@ -163,6 +163,53 @@ def upload_asset(owner, repo, release_id, token, file_path):
     print(f"[Gitee Publish] ⚠️ Failed to upload '{filename}' after multiple attempts.")
     return False
 
+def sync_version_json(owner, repo, token, version_tag):
+    import base64
+    candidates = ["version.json", "releases_repo/version.json", "../version.json"]
+    content_str = None
+    for c in candidates:
+        if os.path.exists(c):
+            try:
+                with open(c, "r", encoding="utf-8") as f:
+                    content_str = f.read()
+                break
+            except Exception:
+                pass
+    if not content_str:
+        print("[Gitee Publish] No version.json file found to sync.")
+        return
+
+    content_b64 = base64.b64encode(content_str.encode("utf-8")).decode("utf-8")
+    headers = {"User-Agent": "Easy-Unraid-CI-Publisher", "Accept": "application/json"}
+    url = f"{GITEE_API_BASE}/repos/{owner}/{repo}/contents/version.json"
+
+    sha = None
+    try:
+        r = requests.get(url, params={"access_token": token}, headers=headers, timeout=15)
+        if r.status_code == 200 and isinstance(r.json(), dict):
+            sha = r.json().get("sha")
+    except Exception as e:
+        print(f"[Gitee Publish] Check version.json error: {e}")
+
+    payload = {
+        "access_token": token,
+        "content": content_b64,
+        "message": f"ci: auto sync version.json to {version_tag}"
+    }
+
+    try:
+        if sha:
+            payload["sha"] = sha
+            r = requests.put(url, json=payload, headers=headers, timeout=20)
+        else:
+            r = requests.post(url, json=payload, headers=headers, timeout=20)
+        if r.status_code in (200, 201):
+            print(f"[Gitee Publish] Successfully synced version.json to Gitee master branch!")
+        else:
+            print(f"[Gitee Publish] Sync version.json response: {r.status_code} - {r.text[:100]}")
+    except Exception as e:
+        print(f"[Gitee Publish] Error syncing version.json: {e}")
+
 def main():
     token = os.environ.get("GITEE_TOKEN", "").strip()
     owner = os.environ.get("GITEE_OWNER", "wdv880518").strip()
@@ -188,6 +235,9 @@ def main():
     if not release_id:
         print("[Gitee Publish] ⚠️ Could not get or create Gitee Release. Skipping assets upload.")
         return 0
+
+    # 同步更新 master 分支上的 version.json 供 App 秒级检查更新
+    sync_version_json(owner, repo, token, tag_name)
 
     if not os.path.isdir(artifacts_dir):
         print(f"[Gitee Publish] Warning: Artifacts directory '{artifacts_dir}' not found.")
