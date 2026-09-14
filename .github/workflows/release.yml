@@ -409,18 +409,8 @@ jobs:
           git push
 
       # --------------------------------------------------
-      # 5. 同步镜像发布至 Gitee Release (国内极速下载源)
+      # 5. 国内镜像发布说明
       # --------------------------------------------------
-      - name: Publish to Gitee Release
-        if: env.GITEE_TOKEN != ''
-        continue-on-error: true
-        env:
-          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
-          GITEE_OWNER: "wdv880518"
-          GITEE_REPO: "easy-unraid"
-          TAG_NAME: v${{ needs.get-version.outputs.version }}
-          ARTIFACTS_DIR: artifacts
-        run: |
-          echo "Starting Gitee Release Mirror Sync..."
-          python3 -m pip install -q requests
-          python3 releases_repo/.github/scripts/publish_gitee.py
+      # 注意：为彻底杜绝海外 CI 节点向国内跨洋上传 160MB 大文件时的丢包与死锁，
+      # Gitee 镜像发布已全面解耦为本地一键脚本 (./sync_gitee.sh)，由境内千兆网络秒级直传。
+
