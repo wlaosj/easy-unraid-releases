@@ -397,3 +397,29 @@ jobs:
           git add version.json
           git commit -m "ci: auto update version.json to v${{ needs.get-version.outputs.version }}" || true
           git push
+
+      # --------------------------------------------------
+      # 5. 同步镜像发布至 Gitee Release (国内极速下载源)
+      # --------------------------------------------------
+      - name: Publish to Gitee Release
+        if: env.GITEE_TOKEN != ''
+        continue-on-error: true
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          GITEE_OWNER: "wdv880518"
+          GITEE_REPO: "easy-unraid"
+          TAG_NAME: v${{ needs.get-version.outputs.version }}
+          ARTIFACTS_DIR: artifacts
+        run: |
+          echo "Starting Gitee Release Mirror Sync..."
+          
+          # 1. 确保 Gitee 远程仓库同步具备最新的代码提交与对应版本 Tag
+          cd releases_repo
+          git remote add gitee "https://${GITEE_OWNER}:${GITEE_TOKEN}@gitee.com/${GITEE_OWNER}/${GITEE_REPO}.git" 2>/dev/null || true
+          git tag -f "${TAG_NAME}" || true
+          git push gitee HEAD:master --tags --force || true
+          cd ..
+
+          # 2. 安装依赖并执行自动化发布与附件上传
+          python3 -m pip install -q requests
+          python3 releases_repo/.github/scripts/publish_gitee.py
