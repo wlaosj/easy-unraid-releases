@@ -475,32 +475,34 @@ Join our official Telegram community to chat with users and test preview builds:
 
 ## 📸 运行截图 (Screenshots)
 
-### 📊 实时硬件仪表盘 (Dashboard)
+### 📊 实时硬件仪表盘与 CPU 深度遥测 (Dashboard & CPU Telemetry)
 <p align="left">
-  <img src="screenshots/Screenshot_2026-08-05-07-42-24-644_com.wlaosj.easy_unraid-edit.png" height="330" alt="Dashboard Overview"/>
+  <img src="screenshots/Screenshot_2026-09-15-08-40-13-672_com.wlaosj.easy_unraid-edit.png" height="350" alt="Dashboard Overview"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-08-05-07-43-05-365_com.wlaosj.easy_unraid-edit.png" height="330" alt="Storage Details"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-08-05-07-43-39-158_com.wlaosj.easy_unraid-edit.png" height="330" alt="System Logs"/>
+  <img src="screenshots/Screenshot_2026-09-15-08-43-09-629_com.wlaosj.easy_unraid-edit.png" height="350" alt="CPU Telemetry & Processes"/>
 </p>
 
-### 🐳 Docker 容器管理 (Docker & Compose)
+### 🐳 Docker 容器、虚拟机与插件中心 (Docker, VMs & Plugins)
 <p align="left">
-  <img src="screenshots/Screenshot_2026-08-05-07-43-21-014_com.wlaosj.easy_unraid-edit.png" height="330" alt="Docker Containers 1"/>
+  <img src="screenshots/Screenshot_2026-09-15-08-42-33-627_com.wlaosj.easy_unraid-edit.png" height="350" alt="Docker Management"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-08-05-07-43-28-830_com.wlaosj.easy_unraid-edit.png" height="330" alt="Docker Containers 2"/>
+  <img src="screenshots/Screenshot_2026-09-15-08-42-40-544_com.wlaosj.easy_unraid-edit.png" height="350" alt="Virtual Machines"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/Screenshot_2026-09-15-08-42-54-091_com.wlaosj.easy_unraid-edit.png" height="350" alt="Plugin Center"/>
 </p>
 
-### 📁 极速文件管理器 (File Manager)
+### 📁 极速文件管理器与自托管 AI 智能相册 (File Manager & Smart Gallery)
 <p align="left">
-  <img src="screenshots/Screenshot_2026-08-05-07-44-09-345_com.wlaosj.easy_unraid-edit.png" height="330" alt="File Browser"/>
+  <img src="screenshots/Screenshot_2026-09-15-08-40-31-550_com.wlaosj.easy_unraid-edit.png" height="350" alt="File Manager"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-08-05-07-44-15-608_com.wlaosj.easy_unraid-edit.png" height="330" alt="Sidebar Navigation"/>
+  <img src="screenshots/Screenshot_2026-09-15-08-41-53-327_com.wlaosj.easy_unraid-edit.png" height="350" alt="Smart Gallery"/>
 </p>
 
-### 🐳 智能相册 (Smart Gallery)
+### 🛡️ 安全登录审计与个性化偏好 (Security Audit & Preferences)
 <p align="left">
-  <img src="screenshots/Screenshot_2026-08-05-07-45-33-076_com.wlaosj.easy_unraid-edit.png" height="330" alt="Smart Gallery Timeline"/>
+  <img src="screenshots/Screenshot_2026-09-15-08-43-21-266_com.wlaosj.easy_unraid-edit.png" height="350" alt="Security Login Audit"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/Screenshot_2026-09-15-08-42-18-889_com.wlaosj.easy_unraid-edit.png" height="350" alt="Preferences & Settings"/>
 </p>
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
