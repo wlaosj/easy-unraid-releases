@@ -141,22 +141,18 @@ Grab the latest release from **[GitHub Releases](https://github.com/wlaosj/easy-
 ## 📸 界面预览 (Screenshots)
 
 <p align="left">
-  <img src="screenshots/Screenshot_2026-09-15-08-40-13-672_com.wlaosj.easy_unraid-edit.png" height="330" alt="Dashboard"/>
+  <img src="screenshots/01_dashboard.png" height="360" alt="Dashboard"/>
   &nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-09-15-08-43-09-629_com.wlaosj.easy_unraid-edit.png" height="330" alt="CPU Telemetry"/>
+  <img src="screenshots/02_docker.png" height="360" alt="Docker"/>
   &nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-09-15-08-42-33-627_com.wlaosj.easy_unraid-edit.png" height="330" alt="Docker"/>
-  &nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-09-15-08-42-40-544_com.wlaosj.easy_unraid-edit.png" height="330" alt="VMs"/>
+  <img src="screenshots/03_vms.png" height="360" alt="VMs"/>
 </p>
 <p align="left">
-  <img src="screenshots/Screenshot_2026-09-15-08-42-54-091_com.wlaosj.easy_unraid-edit.png" height="330" alt="Plugins"/>
+  <img src="screenshots/04_files.png" height="360" alt="File Manager"/>
   &nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-09-15-08-40-31-550_com.wlaosj.easy_unraid-edit.png" height="330" alt="File Manager"/>
+  <img src="screenshots/05_gallery.png" height="360" alt="Smart Gallery"/>
   &nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-09-15-08-41-53-327_com.wlaosj.easy_unraid-edit.png" height="330" alt="Smart Gallery"/>
-  &nbsp;&nbsp;
-  <img src="screenshots/Screenshot_2026-09-15-08-42-18-889_com.wlaosj.easy_unraid-edit.png" height="330" alt="Settings"/>
+  <img src="screenshots/06_smart_hub.png" height="360" alt="Smart Hub"/>
 </p>
 
 <p align="right">(<a href="#readme-top">⬆️ 返回顶部 / Back to Top</a>)</p>
