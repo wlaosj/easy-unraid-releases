@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <img src="screenshots/feature_graphic.png" alt="Easy Unraid Features" width="800" style="border-radius: 16px;"/>
+  <img src="screenshots/feature_graphic.png" alt="Easy Unraid Features" width="680" style="border-radius: 14px;"/>
 </p>
 
 ---
