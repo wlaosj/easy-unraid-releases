@@ -60,11 +60,11 @@
 
 | 功能范围 | 免费版 | Pro 专业版 |
 | :--- | :---: | :---: |
-| 实时硬件仪表盘、3D 机箱阵列概览、安全登录审计 | ✅ 免费 | ✅ |
+| 仪表盘首页概览（CPU / 内存 / 网络 / 3D 机箱阵列概览）与原生桌面小组件 | ✅ 免费 | ✅ |
 | 多服务器切换、局域网直连 / SSH 加密隧道、官方内嵌客服与一键脱敏排障 | ✅ 免费 | ✅ |
-| 基础视频播放 | ✅ 免费 | ✅ 全功能影院 |
-| Docker / Compose v2 / CA 商店 / 插件批量升级 / VM 与 VNC / SSH 终端 | — | ✅ 解锁 |
-| SFTP 文件管理 / 离线 Office / 智能解压 / AI 相册与私密相册 / SODA 离线同传 / 磁盘 SMART 详情 | — | ✅ 解锁 |
+| 全部二级详情页（CPU / 内存 / GPU / UPS / 网络 / 磁盘 SMART / 安全登录审计） | — | ✅ 解锁 |
+| Docker / Compose v2 / CA 商店 / 插件管理 / VM 与 VNC / SSH 终端 | — | ✅ 解锁 |
+| SFTP 文件管理 / 离线 Office / 智能解压 / AI 相册与私密相册 / 影院播放器与 SODA 同传 | — | ✅ 解锁 |
 
 ### 🚀 3 步快速配对与安全承诺
 
@@ -122,11 +122,11 @@ Grab the latest release from **[GitHub Releases](https://github.com/wlaosj/easy-
 
 | Features | Free | Pro |
 | :--- | :---: | :---: |
-| Real-time dashboard, 3D chassis overview, security login audit | ✅ Free | ✅ |
+| Dashboard overview (CPU / RAM / Network / 3D chassis) & native desktop widgets | ✅ Free | ✅ |
 | Multi-server switch, LAN Direct / SSH Tunnel, in-app support & sanitized logs | ✅ Free | ✅ |
-| Basic video playback | ✅ Free | ✅ Cinema Mode |
-| Docker / Compose v2 / CA Store / Batch plugin updates / VM & VNC / SSH terminal | — | ✅ Unlocked |
-| SFTP manager / Offline Office / Smart extract / AI Gallery & Private Vault / SODA subtitles / SMART details | — | ✅ Unlocked |
+| All sub-pages & detail inspectors (Hardware / Drive SMART / Security login audit) | — | ✅ Unlocked |
+| Docker / Compose v2 / CA Store / Plugin manager / VM & VNC / SSH terminal | — | ✅ Unlocked |
+| SFTP manager / Offline Office / Smart extract / AI Gallery & Private Vault / Cinema & SODA subtitles | — | ✅ Unlocked |
 
 ### 🚀 Quick Start & Security
 
